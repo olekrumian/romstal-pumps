@@ -21,12 +21,13 @@ navToggle.addEventListener('click', () => {
   }
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-  date.innerHTML = `Romstal Ukraine © ${new Date().getFullYear()}`
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//   date.innerHTML = `Romstal Ukraine © ${new Date().getFullYear()}`
+// })
 
 /* First slider pumps start */
-const slider = document.querySelector('.slider')
+const slider = document.querySelector('.ready-solution-slider')
+const sliderWrapper = document.querySelector('.ready-solution-wrapper')
 const sliderDots = document.querySelectorAll('.slider-dot')
 
 let currentIndex = 0
@@ -36,11 +37,11 @@ let isDragging = false
 function moveToSlide(index) {
   currentIndex = index
   const translateX = -currentIndex * 100 + '%'
-  slider.style.transform = `translateX(${translateX})`
+  sliderWrapper.style.transform = `translateX(${translateX})`
 
   // Update the active dot
   sliderDots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === currentIndex)
+    dot.classList.toggle('slider-dot-active', i === currentIndex)
   })
 }
 
@@ -50,31 +51,31 @@ sliderDots.forEach((dot, index) => {
   })
 })
 
-slider.addEventListener('mousedown', (e) => {
+sliderWrapper.addEventListener('mousedown', (e) => {
   isDragging = true
   startX = e.clientX
 })
 
-slider.addEventListener('touchstart', (e) => {
+sliderWrapper.addEventListener('touchstart', (e) => {
   isDragging = true
   startX = e.touches[0].clientX
 })
 
-slider.addEventListener('mousemove', (e) => {
+sliderWrapper.addEventListener('mousemove', (e) => {
   if (!isDragging) return
   const offsetX = e.clientX - startX
-  const translateX = -currentIndex * 100 + offsetX + '%'
-  slider.style.transform = `translateX(${translateX})`
+  const translateX = -currentIndex * 100 + offsetX + 'px'
+  sliderWrapper.style.transform = `translateX(${translateX})`
 })
 
-slider.addEventListener('touchmove', (e) => {
+sliderWrapper.addEventListener('touchmove', (e) => {
   if (!isDragging) return
   const offsetX = e.touches[0].clientX - startX
-  const translateX = -currentIndex * 100 + offsetX + '%'
-  slider.style.transform = `translateX(${translateX})`
+  const translateX = -currentIndex * 100 + offsetX + 'px'
+  sliderWrapper.style.transform = `translateX(${translateX})`
 })
 
-slider.addEventListener('mouseup', () => {
+sliderWrapper.addEventListener('mouseup', () => {
   isDragging = false
   const threshold = 100 // Adjust the threshold as needed
   if (Math.abs(startX - event.clientX) > threshold) {
@@ -92,12 +93,12 @@ slider.addEventListener('mouseup', () => {
   }
 })
 
-slider.addEventListener('touchend', () => {
+sliderWrapper.addEventListener('touchend', () => {
   isDragging = false
   moveToSlide(currentIndex)
 })
 
-slider.addEventListener('mouseleave', () => {
+sliderWrapper.addEventListener('mouseleave', () => {
   isDragging = false
   moveToSlide(currentIndex)
 })
