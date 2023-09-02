@@ -26,81 +26,97 @@ navToggle.addEventListener('click', () => {
 // })
 
 /* First slider pumps start */
-const slider = document.querySelector('.ready-solution-slider')
-const sliderWrapper = document.querySelector('.ready-solution-wrapper')
-const sliderDots = document.querySelectorAll('.slider-dot')
+// const slider = document.querySelector('.ready-solution-wrapper')
+// const sliderDots = document.querySelectorAll('.slider-dot')
 
-let currentIndex = 0
-let startX = 0
-let isDragging = false
+// let currentIndex = 0
 
-function moveToSlide(index) {
-  currentIndex = index
-  const translateX = -currentIndex * 100 + '%'
-  sliderWrapper.style.transform = `translateX(${translateX})`
+// function moveToSlide(index) {
+//   currentIndex = index
+//   const translateX = -currentIndex * 100 + '%'
+//   slider.style.transform = `translateX(${translateX})`
 
-  // Update the active dot
-  sliderDots.forEach((dot, i) => {
-    dot.classList.toggle('slider-dot-active', i === currentIndex)
-  })
-}
+//   // Update the active dot
+//   sliderDots.forEach((dot, i) => {
+//     dot.classList.toggle('slider-dot-active', i === currentIndex)
+//   })
+// }
 
-sliderDots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    moveToSlide(index)
-  })
-})
+// sliderDots.forEach((dot, index) => {
+//   dot.addEventListener('click', () => {
+//     moveToSlide(index)
+//   })
+// })
 
-sliderWrapper.addEventListener('mousedown', (e) => {
-  isDragging = true
-  startX = e.clientX
-})
-
-sliderWrapper.addEventListener('touchstart', (e) => {
-  isDragging = true
-  startX = e.touches[0].clientX
-})
-
-sliderWrapper.addEventListener('mousemove', (e) => {
-  if (!isDragging) return
-  const offsetX = e.clientX - startX
-  const translateX = -currentIndex * 100 + offsetX + 'px'
-  sliderWrapper.style.transform = `translateX(${translateX})`
-})
-
-sliderWrapper.addEventListener('touchmove', (e) => {
-  if (!isDragging) return
-  const offsetX = e.touches[0].clientX - startX
-  const translateX = -currentIndex * 100 + offsetX + 'px'
-  sliderWrapper.style.transform = `translateX(${translateX})`
-})
-
-sliderWrapper.addEventListener('mouseup', () => {
-  isDragging = false
-  const threshold = 100 // Adjust the threshold as needed
-  if (Math.abs(startX - event.clientX) > threshold) {
-    if (startX < event.clientX) {
-      if (currentIndex > 0) {
-        moveToSlide(currentIndex - 1)
-      }
-    } else {
-      if (currentIndex < sliderDots.length - 1) {
-        moveToSlide(currentIndex + 1)
-      }
-    }
-  } else {
-    moveToSlide(currentIndex)
-  }
-})
-
-sliderWrapper.addEventListener('touchend', () => {
-  isDragging = false
-  moveToSlide(currentIndex)
-})
-
-sliderWrapper.addEventListener('mouseleave', () => {
-  isDragging = false
-  moveToSlide(currentIndex)
-})
+// // Initial setup
+// moveToSlide(currentIndex)
 
 /* First slider pumps end */
+
+/* Start datalist */
+class DataList {
+  constructor(containerId, inputId, listId, options) {
+    this.containerId = containerId
+    this.inputId = inputId
+    this.listId = listId
+    this.options = options
+  }
+
+  create(filter = '') {
+    const list = document.getElementById(this.listId)
+    const filterOptions = this.options.filter(
+      (d) => filter === '' || d.text.includes(filter)
+    )
+
+    if (filterOptions.length === 0) {
+      list.classList.remove('active')
+    } else {
+      list.classList.add('active')
+    }
+
+    list.innerHTML = filterOptions
+      .map((o) => `<li id=${o.value}>${o.text}</li>`)
+      .join('')
+  }
+
+  addListeners(datalist) {
+    const container = document.getElementById(this.containerId)
+    const input = document.getElementById(this.inputId)
+    const list = document.getElementById(this.listId)
+    container.addEventListener('click', (e) => {
+      if (e.target.id === this.inputId) {
+        container.classList.toggle('active')
+      } else if (e.target.id === 'datalist-icon') {
+        container.classList.toggle('active')
+        input.focus()
+      }
+    })
+
+    input.addEventListener('input', function (e) {
+      if (!container.classList.contains('active')) {
+        container.classList.add('active')
+      }
+
+      datalist.create(input.value)
+    })
+
+    list.addEventListener('click', function (e) {
+      if (e.target.nodeName.toLocaleLowerCase() === 'li') {
+        input.value = e.target.innerText
+        container.classList.remove('active')
+      }
+    })
+  }
+}
+
+const data = [
+  { value: '1', text: 'Низька (5 см)' },
+  { value: '2', text: 'Середня (10 см )' },
+  { value: '3', text: 'Висока (більше 10 см )' },
+]
+
+const datalist = new DataList('datalist', 'datalist-input', 'datalist-ul', data)
+datalist.create()
+datalist.addListeners(datalist)
+
+/* End datalist */

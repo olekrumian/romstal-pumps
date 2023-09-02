@@ -107,8 +107,8 @@
       </div>
     </main>
     <section class="ready-solution">
-      <p class="ready-solution-header">Готові рішення</p>
-      <h3 class="ready-solution-title">Теплові насоси у наявності</h3>
+      <p class="ready-solution-header section-header">Готові рішення</p>
+      <h3 class="ready-solution-title section-title">Теплові насоси у наявності</h3>
       <p class="ready-solution-suptitle">Обирайте готові рішення під ваш будинок</p>
       <div class="ready-solution-wrapper">
         <div class="ready-solution-item">
@@ -158,6 +158,49 @@
         <div class="slider-dot"></div>
         <div class="slider-dot"></div>
         <div class="slider-dot"></div>
+      </div>
+    </section>
+    <section class="selection">
+      <p class="selection-header section-header">Підбір</p>
+      <h3 class="selection-title section-title">Рішення під ваші потреби</h3>
+      <p class="selection-suptitle section-suptitle">Підберіть тепловий насос скориставшись формою розрахунку або
+        відправляйте запит для
+        індивідуального підбіру нашим
+        спеціалистом</p>
+      <div class="selection-form">
+        <form action="" class="form-isolation">
+          <label for="isolation">Ізоляція будівлі <span>*</span></label>
+          <input id="isolation" type="text" class="isolation" list="isolation-data" placeholder="Без ізоляції"
+            name="isolation" autocomplete="off">
+
+          <datalist id="isolation-data">
+            <option>Низька (5 см)</option>
+            <option>Середня (10 см)</option>
+            <option>Висока (більше 10 см )</option>
+          </datalist>
+          <label for="square">Корисна площа будівлі <span>*</span></label>
+          <input id="square" type="number" class="square" placeholder="м²">
+          <div class="selection-result-wrapper">
+            <div class="result-item">
+              <p class="item-title">Об’єм будівлі</p>
+              <p class="item-result">0</p>
+            </div>
+            <div class="result-item">
+              <p class="item-title">тепловитрати</p>
+              <p class="item-result">0</p>
+            </div>
+          </div>
+        </form>
+        <div class="result-form">
+          <div class="result-form-info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path
+                d="M12.5 8.71143V12.7114M12.5 16.7114H12.51M12.5 3.71143C19.7 3.71143 21.5 5.51143 21.5 12.7114C21.5 19.9114 19.7 21.7114 12.5 21.7114C5.3 21.7114 3.5 19.9114 3.5 12.7114C3.5 5.51143 5.3 3.71143 12.5 3.71143Z"
+                stroke="#929292" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p>Заповніть форму для підбіру теплового насоса</p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
