@@ -1,0 +1,119 @@
+:root {
+  /* color */
+  --primary-white: #ffffff;
+  --secondary-white: #fafafa;
+  --thirdly-white: #f4f4f5;
+  --primary-black: #18181b;
+  --primary-color: #f3b240;
+  --grey100: FAFAFA;
+  --grey200: #505054;
+  --grey300: #929292;
+  --grey400: #a2a2a2;
+  --primary-border: F4F4F5;
+  --primary-green: #43974e;
+  --secondary-green: #63ae48;
+  --primary-orange: #f39640;
+
+  /* fontFamily */
+  --ff-primary: 'Manrope', sans-serif, -apple-system;
+  --transition: all 0.2s ease-in-out;
+  --spacing-02: -0.02em;
+  --spacing-03: -0.03em;
+  --lineHeight-100: 100%;
+  --lineHeight-110: 110%;
+  --lineHeight-120: 120%;
+  --lineHeight-150: 150%;
+  --fs-10: 1rem;
+  --fs-12: 1.2rem;
+  --fs-14: 1.4rem;
+  --fs-15: 1.5rem;
+  --fs-16: 1.6rem;
+  --fs-18: 1.8rem;
+  --fs-22: 2.2rem;
+  --fs-20: 2rem;
+  --fs-24: 2.4rem;
+  --fs-26: 2.6rem;
+  --fs-28: 2.8rem;
+  --fs-32: 3.2rem;
+  --fs-40: 4rem;
+  --fs-48: 4.8rem;
+  --fs-64: 6.4rem;
+  --fs-90: 9rem;
+  --fs-96: 9.6rem;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --headerHeight: 8.3rem;
+  --borderRadius: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-style: normal;
+  background: var(--primary-white);
+  color: var(--primary-black);
+  line-height: var(--lineHeight-100);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-500);
+  letter-spacing: var(--spacing-02);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-black);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--hover-link-color);
+}
+
+p {
+  line-height: var(--lineHeight-150);
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing-03);
+  line-height: var(--lineHeight-120);
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 6.4rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+address {
+  font-style: normal;
+}
