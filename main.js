@@ -38,30 +38,6 @@ callFormInput.addEventListener('keypress', (e) => {
 // })
 
 /* First slider pumps start */
-// const slider = document.querySelector('.ready-solution-wrapper')
-// const sliderDots = document.querySelectorAll('.slider-dot')
-
-// let currentIndex = 0
-
-// function moveToSlide(index) {
-//   currentIndex = index
-//   const translateX = -currentIndex * 100 + '%'
-//   slider.style.transform = `translateX(${translateX})`
-
-//   // Update the active dot
-//   sliderDots.forEach((dot, i) => {
-//     dot.classList.toggle('slider-dot-active', i === currentIndex)
-//   })
-// }
-
-// sliderDots.forEach((dot, index) => {
-//   dot.addEventListener('click', () => {
-//     moveToSlide(index)
-//   })
-// })
-
-// // Initial setup
-// moveToSlide(currentIndex)
 
 /* First slider pumps end */
 
