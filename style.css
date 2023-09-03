@@ -1068,6 +1068,10 @@ button {
   border-radius: 1.6rem;
   border: 0.1rem solid var(--thirdly-white);
 }
+
+.calculation-item:last-child {
+  background: var(--secondary-white);
+}
 .calculation-item-header {
   border-bottom: 0.1rem solid #e9e8e7;
 }
@@ -1084,8 +1088,8 @@ button {
   color: var(--grey400);
 }
 .calculation-item-cost-wrapper {
-}
-.calculation-item-cost {
+  display: flex;
+  flex-direction: column;
 }
 .calculation-item-cost-title {
   font-size: var(--fs-10);
@@ -1113,8 +1117,6 @@ button {
 .calculation-item-badge-green p {
   color: var(--primary-white);
 }
-.calculation-item-badge-img {
-}
 .calculation-item-badge-text {
   font-size: var(--fs-10);
   font-weight: var(--fw-800);
@@ -1125,3 +1127,8 @@ button {
   font-size: var(--fs-22);
 }
 /* End of Calculation */
+/* Completed */
+.completed {
+  margin: 9.6rem 0rem 0rem 0rem;
+}
+/* End of Completed */
