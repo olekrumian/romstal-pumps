@@ -272,7 +272,12 @@ button {
   z-index: 5;
 }
 
+.navigation-btn-wrapper {
+  width: 100%;
+}
+
 .navigation-btn-wrapper .leaveRequest {
+  width: 100%;
   margin: 4rem 0rem 0rem 0rem;
   font-size: var(--fs-14);
   font-weight: var(--fw-700);
@@ -1088,8 +1093,6 @@ button {
 .application-img {
   margin: 3.6rem 0rem 3.6rem 0rem;
   width: 100%;
-  filter: drop-shadow(0px 0px 0px rgba(24, 24, 27, 0.35)) drop-shadow(1.9024168252944946px 2.536555767059326px 6.3413896560668945px rgba(24, 24, 27, 0.34)) drop-shadow(6.975528240203857px 9.512084007263184px 12.048640251159668px rgba(24, 24, 27, 0.30)) drop-shadow(15.219334602355957px 21.56072425842285px 15.853473663330078px rgba(24, 24, 27, 0.17)) drop-shadow(26.633834838867188px 38.68247604370117px 19.024168014526367px rgba(24, 24, 27, 0.05)) drop-shadow(41.85316848754883px 60.87733840942383px 20.926584243774414px rgba(24, 24, 27, 0.01));
-  -webkit-filter: drop-shadow(0px 0px 0px rgba(24, 24, 27, 0.35)) drop-shadow(1.9024168252944946px 2.536555767059326px 6.3413896560668945px rgba(24, 24, 27, 0.34)) drop-shadow(6.975528240203857px 9.512084007263184px 12.048640251159668px rgba(24, 24, 27, 0.30)) drop-shadow(15.219334602355957px 21.56072425842285px 15.853473663330078px rgba(24, 24, 27, 0.17)) drop-shadow(26.633834838867188px 38.68247604370117px 19.024168014526367px rgba(24, 24, 27, 0.05)) drop-shadow(41.85316848754883px 60.87733840942383px 20.926584243774414px rgba(24, 24, 27, 0.01));
 }
 
 .application .result-form-info p {
