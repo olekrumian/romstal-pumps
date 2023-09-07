@@ -120,11 +120,7 @@
       <p class="ready-solution-suptitle">Обирайте готові рішення під ваш будинок</p>
       <div class="ready-solution-container">
         <div class="ready-solution-wrapper slider-solution">
-          <div class="ready-solution-item">
-            <div class="item-top-seller">
-              <img src="./assets/icon/alert-square-rounded.svg" alt="">
-              <p>Топ продажів</p>
-            </div>
+          <div class="ready-solution-item" draggable="false">
             <img src="./assets/img/pumps.png" alt="" class="ready-solution-img">
             <div class="item-text-wrapper">
               <p class="item-title">romstal ecoheat</p>
@@ -133,7 +129,7 @@
             </div>
             <button class="item-button">Детальніше</button>
           </div>
-          <div class="ready-solution-item">
+          <div class="ready-solution-item" draggable="false">
             <img src="./assets/img/pumps.png" alt="" class="ready-solution-img">
             <div class="item-text-wrapper">
               <p class="item-title">romstal ecoheat</p>
@@ -142,8 +138,11 @@
             </div>
             <button class="item-button">Детальніше</button>
           </div>
-          <div class="ready-solution-item">
-
+          <div class="ready-solution-item" draggable="false">
+            <div class="item-top-seller">
+              <img src="./assets/icon/alert-square-rounded.svg" alt="">
+              <p>Топ продажів</p>
+            </div>
             <img src="./assets/img/pumps.png" alt="" class="ready-solution-img">
             <div class="item-text-wrapper">
               <p class="item-title">romstal ecoheat</p>
@@ -152,7 +151,7 @@
             </div>
             <button class="item-button">Детальніше</button>
           </div>
-          <div class="ready-solution-item">
+          <div class="ready-solution-item" draggable="false">
             <img src="./assets/img/pumps30.png" alt="" class="ready-solution-img">
             <div class="item-text-wrapper">
               <p class="item-title">romstal ecoheat</p>
@@ -398,7 +397,15 @@
         захисту від замерзання</p>
       <div class="compact-item-wrapper">
         <div class="compact-item">
-          <img src="./assets/img/easy-montage-img1-mobile.jpg" alt="" class="compact-item-img">
+          <div class="compact-slider">
+            <img src="./assets/img/easy-montage-img1.jpg" alt="" class="compact-item-img">
+          </div>
+          <div class="slider-arrow-wrapper">
+            <i id="left" class="left-arrow turn-btn-compact"><img src="./assets/arrow-narrow-left.svg"
+                alt="Слайдер ліворуч"></i>
+            <i id="right" class="right-arrow turn-btn-compact"><img src="./assets/arrow-narrow-right.svg"
+                alt="Слайдер праворуч"></i>
+          </div>
           <div class="compact-item-text-wrapper">
             <div class="item-text-wrapper">
               <div class="item-box">
