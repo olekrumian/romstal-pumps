@@ -168,7 +168,97 @@ document.addEventListener('mouseup', dragStop)
 carousel.addEventListener('scroll', infiniteScroll)
 wrapper.addEventListener('mouseenter', () => clearTimeout(timeoutId))
 /* First slider pumps end */
+/* compact-slider */
+const compactWrapper = document.querySelector('.compact-item')
+const compactSlider = document.querySelector('.compact-slider')
+const compactSliderFirstCardWidth =
+  compactSlider.querySelector('.compact-item-img').offsetWidth
+const compactArrowBtns = document.querySelectorAll(
+  '.compact-slider-arrow-wrappe i'
+)
+const compactSliderChildren = [...compactSlider.children]
 
+let isDraggingCompact = false,
+  startXCompact,
+  startScrollLeftCompact,
+  timeoutIdCompact
+
+// Get the number of cards that can fit in the carousel at once
+let cardPerViewCompact = Math.round(compactSlider.offsetWidth / firstCardWidth)
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+compactSliderChildren
+  .slice(-cardPerViewCompact)
+  .reverse()
+  .forEach((card) => {
+    compactSlider.insertAdjacentHTML('afterbegin', card.outerHTML)
+  })
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+compactSliderChildren.slice(0, cardPerViewCompact).forEach((card) => {
+  compactSlider.insertAdjacentHTML('beforeend', card.outerHTML)
+})
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+compactSlider.classList.add('no-transition')
+compactSlider.scrollLeft = compactSlider.offsetWidth
+compactSlider.classList.remove('no-transition')
+
+// Add event listeners for the arrow buttons to scroll the compactSlider left and right
+arrowBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    compactSlider.scrollLeft +=
+      btn.id == 'left' ? -firstCardWidth : firstCardWidth
+  })
+})
+
+const dragStartCompact = (e) => {
+  isDragging = true
+  compactSlider.classList.add('dragging')
+  // Records the initial cursor and scroll position of the compactSlider
+  startX = e.pageX
+  startScrollLeft = compactSlider.scrollLeft
+}
+
+const draggingCompact = (e) => {
+  if (!isDragging) return // if isDragging is false return from here
+  // Updates the scroll position of the compactSlider based on the cursor movement
+  compactSlider.scrollLeft = startScrollLeft - (e.pageX - startX)
+}
+
+const dragStopCompact = () => {
+  isDragging = false
+  compactSlider.classList.remove('dragging')
+}
+
+const infiniteScrollCompact = () => {
+  // If the compactSlider is at the beginning, scroll to the end
+  if (compactSlider.scrollLeft === 0) {
+    compactSlider.classList.add('no-transition')
+    compactSlider.scrollLeft =
+      compactSlider.scrollWidth - 2 * compactSlider.offsetWidth
+    compactSlider.classList.remove('no-transition')
+  }
+  // If the compactSlider is at the end, scroll to the beginning
+  else if (
+    Math.ceil(compactSlider.scrollLeft) ===
+    compactSlider.scrollWidth - compactSlider.offsetWidth
+  ) {
+    compactSlider.classList.add('no-transition')
+    compactSlider.scrollLeft = compactSlider.offsetWidth
+    compactSlider.classList.remove('no-transition')
+  }
+
+  // Clear existing timeout & start autoplay if mouse is not hovering over compactSlider
+  clearTimeout(timeoutId)
+}
+
+compactSlider.addEventListener('mousedown', dragStartCompact)
+compactSlider.addEventListener('mousemove', draggingCompact)
+document.addEventListener('mouseup', dragStopCompact)
+compactSlider.addEventListener('scroll', infiniteScrollCompact)
+compactWrapper.addEventListener('mouseenter', () => clearTimeout(timeoutId))
+/* end of compact-slider */
 /* Start datalist */
 /* End datalist */
 
