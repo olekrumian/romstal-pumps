@@ -487,7 +487,7 @@ button {
 
 .item-top-seller {
   position: absolute;
-  top: -5.3rem;
+  /* top: -5.3rem; */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -525,6 +525,7 @@ button {
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 1));
   gap: var(--margin16);
+  height: 46.2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
