@@ -79,7 +79,8 @@ navigationLinks.forEach((link) => {
   })
 })
 
-function setupCarousel(carouselSelector, cardSelector, arrowSelectors) {
+/* Sliders */
+function setupSlider(carouselSelector, cardSelector, arrowSelectors) {
   const carousel = document.querySelector(carouselSelector)
   const firstCardWidth = carousel.querySelector(cardSelector).offsetWidth
   const arrowBtns = document.querySelectorAll(arrowSelectors)
@@ -151,7 +152,8 @@ function setupCarousel(carouselSelector, cardSelector, arrowSelectors) {
 }
 
 // Usage
-setupCarousel('.slider-solution', '.ready-solution-item', '.solution-arrow i')
-setupCarousel('.compact-slider', '.card', '.compact-arrow i')
-setupCarousel('.carousel-completed', '.card', '.completed-arrow i')
-setupCarousel('.carousel-video', '.card-video', '.video-arrow i')
+setupSlider('.slider-solution', '.card', '.solution-arrow i')
+setupSlider('.compact-slider', '.card', '.compact-arrow i')
+setupSlider('.carousel-completed', '.card', '.completed-arrow i')
+setupSlider('.carousel-video', '.card-video', '.video-arrow i')
+/* End of Sliders */
