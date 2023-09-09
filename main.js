@@ -79,25 +79,22 @@ navigationLinks.forEach((link) => {
   })
 })
 
-/* First slider pumps start */
+// /* First slider pumps start */
 const wrapper = document.querySelector('.ready-solution-container')
 const carousel = document.querySelector('.slider-solution')
 const firstCardWidth = carousel.querySelector(
   '.ready-solution-item'
 ).offsetWidth
-const arrowBtns = document.querySelectorAll('.slider-arrow-wrapper i')
+const arrowBtn = document.querySelectorAll('.slider-solution-arrow-wrapper i')
 const carouselChildrens = [...carousel.children]
 
 let isDragging = false,
   isAutoPlay = true,
-  startX,
-  startScrollLeft,
-  timeoutId
+  timeoutId,
+  startScrollLeft
 
-// Get the number of cards that can fit in the carousel at once
 let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth)
 
-// Insert copies of the last few cards to beginning of carousel for infinite scrolling
 carouselChildrens
   .slice(-cardPerView)
   .reverse()
@@ -105,18 +102,15 @@ carouselChildrens
     carousel.insertAdjacentHTML('afterbegin', card.outerHTML)
   })
 
-// Insert copies of the first few cards to end of carousel for infinite scrolling
 carouselChildrens.slice(0, cardPerView).forEach((card) => {
   carousel.insertAdjacentHTML('beforeend', card.outerHTML)
 })
 
-// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
 carousel.classList.add('no-transition')
 carousel.scrollLeft = carousel.offsetWidth
 carousel.classList.remove('no-transition')
 
-// Add event listeners for the arrow buttons to scroll the carousel left and right
-arrowBtns.forEach((btn) => {
+arrowBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     carousel.scrollLeft += btn.id == 'left' ? -firstCardWidth : firstCardWidth
   })
@@ -125,14 +119,12 @@ arrowBtns.forEach((btn) => {
 const dragStart = (e) => {
   isDragging = true
   carousel.classList.add('dragging')
-  // Records the initial cursor and scroll position of the carousel
   startX = e.pageX
   startScrollLeft = carousel.scrollLeft
 }
 
 const dragging = (e) => {
-  if (!isDragging) return // if isDragging is false return from here
-  // Updates the scroll position of the carousel based on the cursor movement
+  if (!isDragging) return
   carousel.scrollLeft = startScrollLeft - (e.pageX - startX)
 }
 
@@ -157,8 +149,6 @@ const infiniteScroll = () => {
     carousel.scrollLeft = carousel.offsetWidth
     carousel.classList.remove('no-transition')
   }
-
-  // Clear existing timeout & start autoplay if mouse is not hovering over carousel
   clearTimeout(timeoutId)
 }
 
@@ -166,19 +156,17 @@ carousel.addEventListener('mousedown', dragStart)
 carousel.addEventListener('mousemove', dragging)
 document.addEventListener('mouseup', dragStop)
 carousel.addEventListener('scroll', infiniteScroll)
-wrapper.addEventListener('mouseenter', () => clearTimeout(timeoutId))
 /* First slider pumps end */
 /* compact-slider */
 const sliderCompact = document.querySelector('.compact-item')
 const carouselCompact = document.querySelector('.compact-slider')
 const firstCardCompactWidth = carouselCompact.querySelector('.card').offsetWidth
-const arrowBtnsCompact = document.querySelectorAll('.turn-btn-compact')
+const arrowBtnCompact = document.querySelectorAll('.compact-arrow i')
 const carouselChildrenCompact = [...carouselCompact.children]
 
 let isDraggingCompact = false,
   startXCompact,
-  startScrollLeftCompact,
-  timeoutIdCompact
+  startScrollLeftCompact
 
 let cardPerViewCompact = Math.round(
   carouselCompact.offsetWidth / firstCardWidth
@@ -199,7 +187,7 @@ carouselCompact.classList.add('no-transition')
 carouselCompact.scrollLeft = carouselCompact.offsetWidth
 carouselCompact.classList.remove('no-transition')
 
-arrowBtns.forEach((btn) => {
+arrowBtnCompact.forEach((btn) => {
   btn.addEventListener('click', () => {
     carouselCompact.scrollLeft +=
       btn.id === 'left' ? -firstCardWidth : firstCardWidth
@@ -209,13 +197,14 @@ arrowBtns.forEach((btn) => {
 const dragStartCompact = (e) => {
   isDragging = true
   carouselCompact.classList.add('dragging')
-  startX = e.pageX
-  startScrollLeft = carouselCompact.scrollLeft
+  startXCompact = e.pageX
+  startScrollLeftCompact = carouselCompact.scrollLeft
 }
 
 const draggingCompact = (e) => {
   if (!isDragging) return
-  carouselCompact.scrollLeft = startScrollLeft - (e.pageX - startX)
+  carouselCompact.scrollLeft =
+    startScrollLeftCompact - (e.pageX - startXCompact)
 }
 
 const dragStopCompact = () => {
@@ -237,18 +226,169 @@ const infiniteScrollCompact = () => {
     carouselCompact.scrollLeft = carouselCompact.offsetWidth
     carouselCompact.classList.remove('no-transition')
   }
-
-  clearTimeout(timeoutId)
 }
 
 carouselCompact.addEventListener('mousedown', dragStartCompact)
 carouselCompact.addEventListener('mousemove', draggingCompact)
 document.addEventListener('mouseup', dragStopCompact)
 carouselCompact.addEventListener('scroll', infiniteScrollCompact)
-sliderCompact.addEventListener('mouseenter', () => clearTimeout(timeoutId))
 /* end of compact-slider */
 /* Start datalist */
 /* End datalist */
 
 /* Completed slider */
-/* End of Completed swiper */
+const sliderPhoto = document.querySelector('.slider-photo')
+const carouselCompleted = document.querySelector('.carousel-completed')
+const firstCardWidthCarouselCompleted =
+  carouselCompleted.querySelector('.card').offsetWidth
+const arrowBtnCompleted = document.querySelectorAll('.completed-arrow i')
+const carouselChildren = [...carouselCompleted.children]
+
+let isDraggingCompleted = false,
+  startXCompleted,
+  startScrollLeftCompleted
+
+let cardPerViewCompleted = Math.round(
+  carouselCompleted.offsetWidth / firstCardWidthCarouselCompleted
+)
+
+carouselChildren
+  .slice(-cardPerViewCompleted)
+  .reverse()
+  .forEach((card) => {
+    carouselCompleted.insertAdjacentHTML('afterbegin', card.outerHTML)
+  })
+
+carouselChildren.slice(0, cardPerViewCompleted).forEach((card) => {
+  carouselCompleted.insertAdjacentHTML('beforeend', card.outerHTML)
+})
+
+carouselCompleted.classList.add('no-transition')
+carouselCompleted.scrollLeft = carouselCompleted.offsetWidth
+carouselCompleted.classList.remove('no-transition')
+
+arrowBtnCompleted.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    carouselCompleted.scrollLeft +=
+      btn.id === 'left'
+        ? -firstCardWidthCarouselCompleted
+        : firstCardWidthCarouselCompleted
+  })
+})
+
+const dragStartCompleted = (e) => {
+  isDraggingCompleted = true
+  carouselCompleted.classList.add('dragging')
+  startXCompleted = e.pageX
+  startScrollLeftCompleted = carouselCompleted.scrollLeft
+}
+
+const draggingCompleted = (e) => {
+  if (!isDraggingCompleted) return
+  carouselCompleted.scrollLeft =
+    startScrollLeftCompleted - (e.pageX - startXCompleted)
+}
+
+const dragStopCompleted = () => {
+  isDraggingCompleted = false
+  carouselCompleted.classList.remove('dragging')
+}
+
+const infiniteScrollCompleted = () => {
+  if (carouselCompleted.scrollLeft === 0) {
+    carouselCompleted.classList.add('no-transition')
+    carouselCompleted.scrollLeft =
+      carouselCompleted.scrollWidth - 2 * carouselCompleted.offsetWidth
+    carouselCompleted.classList.remove('no-transition')
+  } else if (
+    Math.ceil(carouselCompleted.scrollLeft) ===
+    carouselCompleted.scrollWidth - carouselCompleted.offsetWidth
+  ) {
+    carouselCompleted.classList.add('no-transition')
+    carouselCompleted.scrollLeft = carouselCompleted.offsetWidth
+    carouselCompleted.classList.remove('no-transition')
+  }
+}
+
+carouselCompleted.addEventListener('mousedown', dragStartCompleted)
+carouselCompleted.addEventListener('mousemove', draggingCompleted)
+document.addEventListener('mouseup', dragStopCompleted)
+carouselCompleted.addEventListener('scroll', infiniteScrollCompleted)
+// /* End of Completed swiper */
+
+// /* Slider Video  */
+const sliderVideo = document.querySelector('.slider-video')
+const carouselVideo = document.querySelector('.carousel-video')
+const firstCardVideoWidth =
+  carouselVideo.querySelector('.card-video').offsetWidth
+const arrowVideoBtns = document.querySelectorAll('.video-arrow i')
+const carouselVideoChildren = [...carouselVideo.children]
+
+let isDraggingVideo = false,
+  startXVideo,
+  startScrollLeftVideo
+
+let cardPerViewVideo = Math.round(
+  carouselVideo.offsetWidth / firstCardVideoWidth
+)
+
+carouselVideoChildren
+  .slice(-cardPerViewVideo)
+  .reverse()
+  .forEach((card) => {
+    carouselVideo.insertAdjacentHTML('afterbegin', card.outerHTML)
+  })
+
+carouselVideoChildren.slice(0, cardPerViewVideo).forEach((card) => {
+  carouselVideo.insertAdjacentHTML('beforeend', card.outerHTML)
+})
+
+carouselVideo.classList.add('no-transition')
+carouselVideo.scrollLeft = carouselVideo.offsetWidth
+carouselVideo.classList.remove('no-transition')
+
+arrowVideoBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    carouselVideo.scrollLeft +=
+      btn.id === 'left' ? -firstCardVideoWidth : firstCardVideoWidth
+  })
+})
+
+const dragStartVideo = (e) => {
+  isDraggingVideo = true
+  carouselVideo.classList.add('dragging')
+  startXVideo = e.pageX
+  startScrollLeftVideo = carouselVideo.scrollLeft
+}
+
+const draggingVideo = (e) => {
+  if (!isDraggingVideo) return
+  carouselVideo.scrollLeft = startScrollLeftVideo - (e.pageX - startXVideo)
+}
+
+const dragStopVideo = () => {
+  isDraggingVideo = false
+  carouselVideo.classList.remove('dragging')
+}
+
+const infiniteScrollVideo = () => {
+  if (carouselVideo.scrollLeft === 0) {
+    carouselVideo.classList.add('no-transition')
+    carouselVideo.scrollLeft =
+      carouselVideo.scrollWidth - 2 * carouselVideo.offsetWidth
+    carouselVideo.classList.remove('no-transition')
+  } else if (
+    Math.ceil(carouselVideo.scrollLeft) ===
+    carouselVideo.scrollWidth - carouselVideo.offsetWidth
+  ) {
+    carouselVideo.classList.add('no-transition')
+    carouselVideo.scrollLeft = carouselVideo.offsetWidth
+    carouselVideo.classList.remove('no-transition')
+  }
+}
+
+carouselVideo.addEventListener('mousedown', dragStartVideo)
+carouselVideo.addEventListener('mousemove', draggingVideo)
+document.addEventListener('mouseup', dragStopVideo)
+carouselVideo.addEventListener('scroll', infiniteScrollVideo)
+// /* End Of Slider Video */

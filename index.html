@@ -120,7 +120,7 @@
       <p class="ready-solution-suptitle">Обирайте готові рішення під ваш будинок</p>
       <div class="ready-solution-container">
         <div class="ready-solution-wrapper slider-solution">
-          <div class="ready-solution-item" draggable="false">
+          <div class="ready-solution-item card">
             <img src="./assets/img/pumps.png" alt="" class="ready-solution-img">
             <div class="item-text-wrapper">
               <p class="item-title">romstal ecoheat</p>
@@ -129,7 +129,7 @@
             </div>
             <button class="item-button">Детальніше</button>
           </div>
-          <div class="ready-solution-item" draggable="false">
+          <div class="ready-solution-item card">
             <img src="./assets/img/pumps.png" alt="" class="ready-solution-img">
             <div class="item-text-wrapper">
               <p class="item-title">romstal ecoheat</p>
@@ -138,7 +138,7 @@
             </div>
             <button class="item-button">Детальніше</button>
           </div>
-          <div class="ready-solution-item" draggable="false">
+          <div class="ready-solution-item card">
             <div class="item-top-seller">
               <img src="./assets/icon/alert-square-rounded.svg" alt="">
               <p>Топ продажів</p>
@@ -151,7 +151,7 @@
             </div>
             <button class="item-button">Детальніше</button>
           </div>
-          <div class="ready-solution-item" draggable="false">
+          <div class="ready-solution-item card">
             <img src="./assets/img/pumps30.png" alt="" class="ready-solution-img">
             <div class="item-text-wrapper">
               <p class="item-title">romstal ecoheat</p>
@@ -161,11 +161,9 @@
             <button class="item-button">Детальніше</button>
           </div>
         </div>
-        <div class="slider-arrow-wrapper">
-          <i id="left" class="left-arrow turn-btn-photo"><img src="./assets/arrow-narrow-left.svg"
-              alt="Слайдер ліворуч"></i>
-          <i id="right" class="right-arrow turn-btn-photo"><img src="./assets/arrow-narrow-right.svg"
-              alt="Слайдер праворуч"></i>
+        <div class="slider-arrow-wrapper slider-solution-arrow-wrapper">
+          <i id="left" class="left-arrow"><img src="./assets/arrow-narrow-left.svg" alt="Слайдер ліворуч"></i>
+          <i id="right" class="right-arrow"><img src="./assets/arrow-narrow-right.svg" alt="Слайдер праворуч"></i>
         </div>
       </div>
     </section>
@@ -415,7 +413,7 @@
             </li>
           </ul>
         </div>
-        <div class="slider-arrow-wrapper compact-slider-arrow-wrapper">
+        <div class="slider-arrow-wrapper compact-arrow">
           <i id="left" class="left-arrow turn-btn-compact"><img src="./assets/arrow-narrow-left.svg"
               alt="Слайдер ліворуч"></i>
           <i id="right" class="right-arrow turn-btn-compact"><img src="./assets/arrow-narrow-right.svg"
@@ -445,126 +443,176 @@
           </div>
         </div>
       </div>
-  </div>
-  </section>
-  <!-- End of Compact -->
-  <!-- Universality -->
-  <section class="universality">
-    <p class="universality-header section-header">Універсальність</p>
-    <h3 class="universality-title section-title">Теплова схема</h3>
-    <p class="universality-suptitle section-suptitle">Монтується в будь-яку систему опалення</p>
-    <div class="universality-img-wrapper">
-      <img src="./assets/img/heat-system-mobile.jpg" alt="" class="universality-img">
-    </div>
-  </section>
-  <!-- End of Universality -->
-  <!-- Calculation -->
-  <section class="calculation">
-    <p class="calculation-header section-header">приклад Розрахунку</p>
-    <h3 class="calculation-title section-title">Витрати за сезон</h3>
-    <p class="calculation-suptitle section-suptitle">Економте 41 488 ₴ за сезон використовуючи тепловий насос, у
-      порівнянни з електричним та газовим котлами</p>
-    <div class="calculation-item-wrapper">
-      <div class="calculation-item">
-        <div class="calculation-item-header">
-          <h4 class="calculation-item-header-title">Електричний котел</h4>
-          <p class="calculation-item-header-suptitle">вартість електроенергії 2.64₴ / кВт година</p>
-        </div>
-        <div class="calculation-item-cost">
-          <p class="calculation-item-cost-title">орієнтовні витрати за сезон</p>
-          <p class="calculation-item-cost-sum">58 080 ₴</p>
-        </div>
-        <div class="calculation-item-badge">
-          <img src="./assets/icon/trees.svg" alt="" class="calculation-item-badge-img">
-          <p class="calculation-item-badge-text">8.250 кг CO₂/сезон еквівалент 82 деревам поглинаючим вироблений CO₂
-          </p>
-        </div>
+    </section>
+    <!-- End of Compact -->
+    <!-- Universality -->
+    <section class="universality">
+      <p class="universality-header section-header">Універсальність</p>
+      <h3 class="universality-title section-title">Теплова схема</h3>
+      <p class="universality-suptitle section-suptitle">Монтується в будь-яку систему опалення</p>
+      <div class="universality-img-wrapper">
+        <img src="./assets/img/heat-system-mobile.jpg" alt="" class="universality-img">
       </div>
-      <div class="calculation-item">
-        <div class="calculation-item-header">
-          <h4 class="calculation-item-header-title">Газовий котел</h4>
-          <p class="calculation-item-header-suptitle">Середня вартість газу 9₴ / м3</p>
-        </div>
-        <div class="calculation-item-cost">
-          <p class="calculation-item-cost-title">орієнтовні витрати за сезон</p>
-          <p class="calculation-item-cost-sum">28 350 ₴</p>
-        </div>
-        <div class="calculation-item-badge">
-          <img src="./assets/icon/trees.svg" alt="" class="calculation-item-badge-img">
-          <p class="calculation-item-badge-text">2.400 кг CO₂/сезон еквівалент 24 деревам поглинаючим вироблений CO₂
-          </p>
-        </div>
-      </div>
-      <div class="calculation-item">
-        <div class="calculation-item-header">
-          <h4 class="calculation-item-header-title">Тепловий насос</h4>
-          <p class="calculation-item-header-suptitle">вартість електроенергії 2.64₴ / кВт година</p>
-        </div>
-        <div class="calculation-item-cost-wrapper">
+    </section>
+    <!-- End of Universality -->
+    <!-- Calculation -->
+    <section class="calculation">
+      <p class="calculation-header section-header">приклад Розрахунку</p>
+      <h3 class="calculation-title section-title">Витрати за сезон</h3>
+      <p class="calculation-suptitle section-suptitle">Економте 41 488 ₴ за сезон використовуючи тепловий насос, у
+        порівнянни з електричним та газовим котлами</p>
+      <div class="calculation-item-wrapper">
+        <div class="calculation-item">
+          <div class="calculation-item-header">
+            <h4 class="calculation-item-header-title">Електричний котел</h4>
+            <p class="calculation-item-header-suptitle">вартість електроенергії 2.64₴ / кВт година</p>
+          </div>
           <div class="calculation-item-cost">
             <p class="calculation-item-cost-title">орієнтовні витрати за сезон</p>
-            <p class="calculation-item-cost-sum">16 592 ₴</p>
+            <p class="calculation-item-cost-sum">58 080 ₴</p>
           </div>
-          <div class="calculation-item-cost">
-            <p class="calculation-item-cost-title">Економія за сезон порівняно з газовим котлом</p>
-            <p class="calculation-item-cost-sum calculation-item-cost-sum-small">11 758 ₴</p>
-          </div>
-          <div class="calculation-item-cost">
-            <p class="calculation-item-cost-title">Економія за сезон порівняно з електричним котлом</p>
-            <p class="calculation-item-cost-sum calculation-item-cost-sum-small">41 488 ₴</p>
+          <div class="calculation-item-badge">
+            <img src="./assets/icon/trees.svg" alt="" class="calculation-item-badge-img">
+            <p class="calculation-item-badge-text">8.250 кг CO₂/сезон еквівалент 82 деревам поглинаючим вироблений CO₂
+            </p>
           </div>
         </div>
-        <div class="calculation-item-badge calculation-item-badge-green">
-          <img src="./assets/icon/trees-w.svg" alt="" class="calculation-item-badge-img">
-          <p class="calculation-item-badge-text">1.526 кг CO₂/сезон еквівалент 15 деревам поглинаючим вироблений CO₂
-          </p>
+        <div class="calculation-item">
+          <div class="calculation-item-header">
+            <h4 class="calculation-item-header-title">Газовий котел</h4>
+            <p class="calculation-item-header-suptitle">Середня вартість газу 9₴ / м3</p>
+          </div>
+          <div class="calculation-item-cost">
+            <p class="calculation-item-cost-title">орієнтовні витрати за сезон</p>
+            <p class="calculation-item-cost-sum">28 350 ₴</p>
+          </div>
+          <div class="calculation-item-badge">
+            <img src="./assets/icon/trees.svg" alt="" class="calculation-item-badge-img">
+            <p class="calculation-item-badge-text">2.400 кг CO₂/сезон еквівалент 24 деревам поглинаючим вироблений CO₂
+            </p>
+          </div>
+        </div>
+        <div class="calculation-item">
+          <div class="calculation-item-header">
+            <h4 class="calculation-item-header-title">Тепловий насос</h4>
+            <p class="calculation-item-header-suptitle">вартість електроенергії 2.64₴ / кВт година</p>
+          </div>
+          <div class="calculation-item-cost-wrapper">
+            <div class="calculation-item-cost">
+              <p class="calculation-item-cost-title">орієнтовні витрати за сезон</p>
+              <p class="calculation-item-cost-sum">16 592 ₴</p>
+            </div>
+            <div class="calculation-item-cost">
+              <p class="calculation-item-cost-title">Економія за сезон порівняно з газовим котлом</p>
+              <p class="calculation-item-cost-sum calculation-item-cost-sum-small">11 758 ₴</p>
+            </div>
+            <div class="calculation-item-cost">
+              <p class="calculation-item-cost-title">Економія за сезон порівняно з електричним котлом</p>
+              <p class="calculation-item-cost-sum calculation-item-cost-sum-small">41 488 ₴</p>
+            </div>
+          </div>
+          <div class="calculation-item-badge calculation-item-badge-green">
+            <img src="./assets/icon/trees-w.svg" alt="" class="calculation-item-badge-img">
+            <p class="calculation-item-badge-text">1.526 кг CO₂/сезон еквівалент 15 деревам поглинаючим вироблений CO₂
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End of Calculation -->
-  <!-- Completed -->
-  <section class="completed">
-    <h3 class="completed-title section-title">Виконані проєкти</h3>
-  </section>
-  <!-- End of Completed -->
-  <!-- Second Call Form -->
-  <section id="callForm" class="form">
-    <form action="" class="call-form">
-      <label for="call" class="form-title">Залишити заявку</label>
-      <input id="call" class="call-form-input" type="text" inputmode="tel" placeholder="+38" autocomplete="off"
-        aria-label="Відправити" title="Відправити" required>
-      <div class="call-form-line"></div>
-      <button class="form-btn" aria-label="Відправити" title="Відправити"></button>
-    </form>
-  </section>
-  <!-- End of Second Call Form -->
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-items-wrapper">
-      <div class="footer-item">
-        <h5 class="footer-item-title">інфо</h5>
-        <ul>
-          <li><a href="https://romstal.ua/uk/catalog/1178-fotovoltazhnye-paneli/" target="_blank">Каталог
-              панелей</a></li>
-          <li><a href="https://romstal.ua/uk/site/about" target="_blank">О нас</a></li>
+    </section>
+    <!-- End of Calculation -->
+    <!-- Completed -->
+    <section class="completed">
+      <h3 class="completed-title section-title">Виконані проєкти</h3>
+      <div class="completed-items-wrapper slider-photo">
+        <ul class="carousel-completed">
+          <li class="card">
+            <div class="img"><img src="./assets//img//ready-img-1.jpg" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./assets//img//ready-img-1.jpg" alt=" Виконані роботи ">
+            </div>
+          </li>
+          <li class=" card">
+            <div class="img"><img src="./assets//img//ready-img-1.jpg" alt="Виконані роботи ">
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./assets//img//ready-img-1.jpg" alt="Виконані роботи ">
+            </div>
+          </li>
         </ul>
-      </div>
-      <div class="footer-item">
-        <h4 class="footer-item-title">Контакти</h4>
-        <div class="footer-contact">
-          <a href="tel:+380952824987">+38 095 282 49 87</a>
-          <a href="mailto:shop@romstal.ua">shop@romstal.ua</a>
-          <address><a
-              href="https://www.google.com/maps/place/%D0%A0%D0%BE%D0%BC%D1%81%D1%82%D0%B0%D0%BB+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0/@50.4807992,30.4897451,18.44z/data=!4m15!1m8!3m7!1s0x40d4cde21e653823:0xbd95e9dadc1394d0!2z0LLRg9C70LjRhtGPINCd0L7QstC-0LrQvtGB0YLRj9C90YLQuNC90ZbQstGB0YzQutCwLCA00JAsINCa0LjRl9CyLCAwMjAwMA!3b1!8m2!3d50.479536!4d30.492765!16s%2Fg%2F11c5d4xzrk!3m5!1s0x40d4cde21e653823:0x168a044b98379039!8m2!3d50.4809987!4d30.4898449!16s%2Fg%2F11_t2f4h7?entry=ttu"
-              target="_blank">м. Київ, вул. Новокостянтинівська 4А</a></address>
+        <div class="slider-arrow-wrapper completed-arrow">
+          <i id="left" class="left-arrow turn-btn-photo"><img src="./assets/arrow-narrow-left.svg"
+              alt="Слайдер ліворуч"></i>
+          <i id="right" class="right-arrow turn-btn-photo"><img src=".//assets/arrow-narrow-right.svg"
+              alt="Слайдер праворуч"></i>
         </div>
       </div>
-    </div>
-    <div class="footer-title">Romstal</div>
-    <p class="footer-copyright"></p>
-  </footer>
-  <!-- End of Footer -->
+      <div class="completed-items-wrapper slider-video">
+        <ul class="carousel-video">
+          <li class="card-video">
+            <div class="img">
+              <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="card-video">
+            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+          </li>
+          <li class="card-video">
+            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+          </li>
+        </ul>
+        <div class="slider-arrow-wrapper video-arrow">
+          <i id="left" class="left-arrow turn-btn-video"><img src="./assets/arrow-narrow-left.svg" alt=""></i>
+          <i id="right" class="right-arrow turn-btn-video"><img src="./assets/arrow-narrow-right.svg" alt=""></i>
+        </div>
+      </div>
+    </section>
+    <!-- End of Completed -->
+    <!-- Second Call Form -->
+    <section id="callForm" class="form">
+      <form action="" class="call-form">
+        <label for="call" class="form-title">Залишити заявку</label>
+        <input id="call" class="call-form-input" type="text" inputmode="tel" placeholder="+38" autocomplete="off"
+          aria-label="Відправити" title="Відправити" required>
+        <div class="call-form-line"></div>
+        <button class="form-btn" aria-label="Відправити" title="Відправити"></button>
+      </form>
+    </section>
+    <!-- End of Second Call Form -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-items-wrapper">
+        <div class="footer-item">
+          <h5 class="footer-item-title">інфо</h5>
+          <ul>
+            <li><a href="https://romstal.ua/uk/catalog/1178-fotovoltazhnye-paneli/" target="_blank">Каталог
+                панелей</a></li>
+            <li><a href="https://romstal.ua/uk/site/about" target="_blank">О нас</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h4 class="footer-item-title">Контакти</h4>
+          <div class="footer-contact">
+            <a href="tel:+380952824987">+38 095 282 49 87</a>
+            <a href="mailto:shop@romstal.ua">shop@romstal.ua</a>
+            <address><a
+                href="https://www.google.com/maps/place/%D0%A0%D0%BE%D0%BC%D1%81%D1%82%D0%B0%D0%BB+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0/@50.4807992,30.4897451,18.44z/data=!4m15!1m8!3m7!1s0x40d4cde21e653823:0xbd95e9dadc1394d0!2z0LLRg9C70LjRhtGPINCd0L7QstC-0LrQvtGB0YLRj9C90YLQuNC90ZbQstGB0YzQutCwLCA00JAsINCa0LjRl9CyLCAwMjAwMA!3b1!8m2!3d50.479536!4d30.492765!16s%2Fg%2F11c5d4xzrk!3m5!1s0x40d4cde21e653823:0x168a044b98379039!8m2!3d50.4809987!4d30.4898449!16s%2Fg%2F11_t2f4h7?entry=ttu"
+                target="_blank">м. Київ, вул. Новокостянтинівська 4А</a></address>
+          </div>
+        </div>
+      </div>
+      <div class="footer-title">Romstal</div>
+      <p class="footer-copyright"></p>
+    </footer>
+    <!-- End of Footer -->
   </div>
 
   <script src="./main.js"></script>

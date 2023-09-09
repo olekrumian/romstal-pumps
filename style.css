@@ -1232,7 +1232,7 @@ button {
 
 .compact-slider .card .img {
   width: 100%;
-  height: 26rem;
+  height: 30rem;
 }
 
 .item-box {
@@ -1389,10 +1389,113 @@ button {
   margin: 0rem 0rem 4.8rem 0rem;
 }
 
+.completed-items-wrapper {
+  margin: 0rem 0rem 4.8rem 0rem;
+}
+
 /* completed slider */
+.slider-photo,
+.slider-video {
+  max-width: 120rem;
+  width: 100%;
+  position: relative;
+}
+
+.slider-photo .carousel-completed,
+.slider-video .carousel-video {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% / 1);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 0.8rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel-completed {
+  margin: 0rem 0rem 1.6rem 0rem;
+  height: 30rem;
+}
+
+.carousel-video {
+  margin: 0rem 0rem 1.6rem 0rem;
+  height: 20.1rem;
+  border-radius: var(--margin08);
+  -webkit-border-radius: var(--margin08);
+  -moz-border-radius: var(--margin08);
+  -ms-border-radius: var(--margin08);
+  -o-border-radius: var(--margin08);
+}
+
+.slider-video .carousel-video {
+  grid-auto-columns: calc(100% / 1);
+}
+
+.carousel-completed::-webkit-scrollbar,
+.carousel-video::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-completed.no-transition,
+.carousel-video.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging,
+.carousel-video.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card,
+.carousel-video.dragging .card-video {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-completed :where(.card, .img),
+.carousel-video :where(.card-video, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-completed .card,
+.carousel-video .card-video {
+  scroll-snap-align: start;
+  list-style: none;
+  cursor: pointer;
+}
+
+.carousel-completed .card .img,
+.carousel-video .card-video .img {
+  width: 100%;
+  height: 30rem;
+}
+
+.card .img img,
+.card-video .img img,
+.card-video .img iframe {
+  width: 100%;
+  height: 30rem;
+  object-fit: fill;
+  border-radius: var(--margin08);
+  -webkit-border-radius: var(--margin08);
+  -moz-border-radius: var(--margin08);
+  -ms-border-radius: var(--margin08);
+  -o-border-radius: var(--margin08);
+}
 
 /* end of completed slider */
+/* Completed Video slider */
+.card-video {
+  width: 100%;
+  height: 20rem;
+  ;
+}
 
+/* End of Completed Video slider */
 /* End of Completed */
 /* Footer */
 .footer {
