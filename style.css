@@ -487,7 +487,7 @@ button {
 
 .item-top-seller {
   position: absolute;
-  /* top: -5.3rem; */
+  top: -5.3rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -523,9 +523,8 @@ button {
 .ready-solution-container .slider-solution {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 1));
+  grid-auto-columns: calc(100% / 1);
   gap: var(--margin16);
-  height: 46.2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -1156,7 +1155,7 @@ button {
   position: relative;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 1) - 12px);
+  grid-auto-columns: calc(100% / 1);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: var(--margin16);
@@ -1195,9 +1194,45 @@ button {
 }
 
 .compact-item-img {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: auto;
+}
+
+.compact-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.compact-slider.no-transition {
+  scroll-behavior: auto;
+}
+
+.compact-slider.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.compact-slider.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.compact-slider :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compact-slider .card {
+  scroll-snap-align: start;
+  list-style: none;
+  cursor: pointer;
+}
+
+.compact-slider .card .img {
+  width: 100%;
+  height: 26rem;
 }
 
 .item-box {
