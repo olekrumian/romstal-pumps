@@ -160,22 +160,13 @@ const infiniteScroll = () => {
 
   // Clear existing timeout & start autoplay if mouse is not hovering over carousel
   clearTimeout(timeoutId)
-  if (!wrapper.matches(':hover')) autoPlay()
 }
-
-const autoPlay = () => {
-  if (window.innerWidth < 800 || !isAutoPlay) return // Return if window is smaller than 800 or isAutoPlay is false
-  // Autoplay the carousel after every 2500 ms
-  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500)
-}
-autoPlay()
 
 carousel.addEventListener('mousedown', dragStart)
 carousel.addEventListener('mousemove', dragging)
 document.addEventListener('mouseup', dragStop)
 carousel.addEventListener('scroll', infiniteScroll)
 wrapper.addEventListener('mouseenter', () => clearTimeout(timeoutId))
-wrapper.addEventListener('mouseleave', autoPlay)
 /* First slider pumps end */
 
 /* Start datalist */
