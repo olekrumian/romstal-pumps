@@ -35,6 +35,12 @@ callFormInput.forEach((element) => {
 })
 /* End of Call Form */
 
+request.forEach((item) => {
+  item.addEventListener('click', () => {
+    scrollToCall('callForm', -83)
+  })
+})
+
 document.addEventListener('DOMContentLoaded', () => {
   date.innerHTML = `Romstal Ukraine © ${new Date().getFullYear()}`
 })
