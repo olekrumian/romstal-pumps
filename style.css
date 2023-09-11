@@ -2876,17 +2876,31 @@ button {
     cursor: pointer;
   }
 
-  .carousel-completed .card .img,
-  .carousel-video .card-video .img {
+  .carousel-completed .card .img {
     width: 100%;
     height: 30rem;
   }
 
+  .carousel-video .card-video .img {
+    width: 100%;
+    height: 20rem;
+  }
+
   .card .img img,
-  .card-video .img img,
-  .card-video .img iframe {
+  .card-video .img img {
     width: 100%;
     height: 30rem;
+    object-fit: fill;
+    border-radius: var(--margin08);
+    -webkit-border-radius: var(--margin08);
+    -moz-border-radius: var(--margin08);
+    -ms-border-radius: var(--margin08);
+    -o-border-radius: var(--margin08);
+  }
+
+  .card-video .img iframe {
+    width: 100%;
+    height: 20rem;
     object-fit: fill;
     border-radius: var(--margin08);
     -webkit-border-radius: var(--margin08);
