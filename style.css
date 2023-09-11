@@ -482,7 +482,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 15.3rem;
+  max-width: 15.5rem;
   display: flex;
   align-items: center;
   padding: 0.4rem 2rem 0.4rem 0.4rem;
@@ -1552,6 +1552,7 @@ button {
 }
 
 .footer-title {
+  position: relative;
   margin: 0rem 0rem 0rem 0rem;
   font-size: 33.2rem;
   font-weight: var(--fw-400);
@@ -1975,6 +1976,8 @@ button {
   .ready-solution-item:has(.item-top-seller) .item-suptitle {
     color: var(--grey200);
   }
+
+  .item-top-seller {}
 
   .item-power {
     font-size: var(--fs-26);
