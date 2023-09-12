@@ -33,25 +33,25 @@
         </div>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="nav-link" href="#benefits">Переваги</a>
+            <a class="nav-link" href="#selection">Переваги</a>
           </li>
           <li class="navigation-item">
-            <a class="nav-link" href="#stationTypes">Енергоефективність</a>
+            <a class="nav-link" href="#energyefficient">Енергоефективність</a>
           </li>
           <li class="navigation-item">
-            <a class="nav-link" href="#installation">Умови праці</a>
+            <a class="nav-link" href="#environment">Умови праці</a>
           </li>
           <li class="navigation-item">
-            <a class="nav-link" href="#completed">Рівень шуму</a>
+            <a class="nav-link" href="#quiet">Рівень шуму</a>
           </li>
           <li class="navigation-item">
-            <a class="nav-link" href="#completed">Управління</a>
+            <a class="nav-link" href="#application">Управління</a>
           </li>
           <li class="navigation-item">
             <a class="nav-link" href="#compact">Монтаж</a>
           </li>
           <li class="navigation-item">
-            <a class="nav-link" href="#completed">Розрахунок витрат</a>
+            <a class="nav-link" href="#calculation">Розрахунок витрат</a>
           </li>
           <li class="navigation-item">
             <a href="https://romstal.ua/uk/site/about" target="_blank">О нас</a>
@@ -79,7 +79,10 @@
     <!-- Main -->
     <main class="main">
       <div class="main-wrapper">
-        <img class="main-img" loading="lazy" src="./assets/img/main.jpg" alt="Помпи">
+        <picture class="main-pic-img">
+          <source media="(max-width: 576px)" srcset="./assets/img/main-mobile.jpg">
+          <img class="main-img" src="./assets/img/main.jpg" alt="Помпи">
+        </picture>
         <div class="main-text-wrapper">
           <h1 class="main-title">Перший крок до 3-кратної економії на опаленні</h1>
           <p class="main-description">
@@ -174,7 +177,7 @@
     </section>
     <!-- End of Solution -->
     <!-- Selection -->
-    <section class="selection">
+    <section id="selection" class="selection">
       <p class="selection-header section-header">Підбір</p>
       <h3 class="selection-title section-title">Рішення під ваші потреби</h3>
       <p class="selection-suptitle section-suptitle">Підберіть тепловий насос скориставшись формою розрахунку або
@@ -277,7 +280,7 @@
     </div>
     <!-- End of Solution -->
     <!-- EnergyEfficient -->
-    <section class="energyefficient">
+    <section id="energyefficient" class="energyefficient">
       <p class="energyefficient-header section-header">Енергоефективний</p>
       <h3 class="energyefficient-title section-title">Найвищий клас енергоефективності</h3>
       <div class="energyefficient-wrapper">
@@ -293,7 +296,7 @@
     </section>
     <!-- End of EnergyEfficient -->
     <!-- Environment -->
-    <section class="environment">
+    <section id="environment" class="environment">
       <p class="environment-header section-header">В мороз та спеку</p>
       <h3 class="environment-title section-title">Працює в любих умовах</h3>
       <p class="environment-suptitle section-suptitle">Широкий діапозон роботи, від -25С до 46С</p>
@@ -338,7 +341,7 @@
     </section>
     <!-- End of Environment -->
     <!-- Quiet -->
-    <section class="quiet">
+    <section id="quiet" class="quiet">
       <p class="quiet-header section-header">Тихий</p>
       <h3 class="quiet-title section-title">Надзвичайно безшумний</h3>
       <p class="quiet-suptitle section-suptitle">Тихіше ніж спів птахів, має рівень шуму 35DB на відстані в 3М</p>
@@ -371,7 +374,7 @@
     </section>
     <!-- End of Quiet -->
     <!-- Application -->
-    <section class="application">
+    <section id="application" class="application">
       <p class="application-header section-header">Додаток</p>
       <h3 class="application-title section-title">Інтелектуальне управління</h3>
       <p class="application-suptitle section-suptitle">Керуйте тепловим насосом з мобільного дотатку, робіть
@@ -465,7 +468,7 @@
     </section>
     <!-- End of Universality -->
     <!-- Calculation -->
-    <section class="calculation">
+    <section id="calculation" class="calculation">
       <p class="calculation-header section-header">приклад Розрахунку</p>
       <h3 class="calculation-title section-title">Витрати за сезон</h3>
       <p class="calculation-suptitle section-suptitle">Економте 41 488 ₴ за сезон використовуючи тепловий насос, у
