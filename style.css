@@ -1785,10 +1785,6 @@ button {
     line-height: 150%;
   }
 
-  .main-pic-img {
-    width: 100%;
-  }
-
   .main-wrapper {
     width: 100%;
     margin: calc(var(--headerHeight) + calc(var(--margin08) * 3)) auto 0;

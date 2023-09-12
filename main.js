@@ -3,9 +3,13 @@ const navToggle = document.querySelector('.mobile-nav-toggle')
 const date = document.querySelector('.footer-copyright')
 const request = document.querySelectorAll('.leaveRequest')
 const navigationLinks = document.querySelectorAll('.nav-link')
-
 const visibility = navigation.getAttribute('data-visible')
 
+document.addEventListener('DOMContentLoaded', () => {
+  date.innerHTML = `Romstal Ukraine © ${new Date().getFullYear()}`
+})
+
+/* Navigation */
 navToggle.addEventListener('click', () => {
   const visibility = navigation.getAttribute('data-visible')
   if (visibility === 'false') {
@@ -20,7 +24,7 @@ navToggle.addEventListener('click', () => {
     document.body.style.overflow = ''
   }
 })
-
+/* End of Navigation */
 /* Call Form */
 const callFormInput = document.querySelectorAll('.call-form-input')
 
@@ -39,10 +43,6 @@ request.forEach((item) => {
   item.addEventListener('click', () => {
     scrollToCall('callForm', -83)
   })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  date.innerHTML = `Romstal Ukraine © ${new Date().getFullYear()}`
 })
 
 function scrollToSection(e, offset) {
@@ -157,7 +157,6 @@ function setupSlider(carouselSelector, cardSelector, arrowSelectors) {
   carousel.addEventListener('scroll', infiniteScroll)
 }
 
-// Usage
 setupSlider('.slider-solution', '.card', '.solution-arrow i')
 setupSlider('.compact-slider', '.card', '.compact-arrow i')
 setupSlider('.carousel-completed', '.card', '.completed-arrow i')
