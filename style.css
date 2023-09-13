@@ -415,7 +415,7 @@ button:hover {
   padding: var(--margin16);
   border-radius: 1.6rem;
   border: .1rem solid var(--thirdly-white);
-  background: var(--secondary-white);
+  background: var(--primary-white);
   box-shadow: 0rem .5rem 2.5rem 0rem rgba(0, 0, 0, 0.04);
   -webkit-border-radius: 1.6rem;
   -moz-border-radius: 1.6rem;
@@ -754,7 +754,7 @@ select {
   width: 100%;
   max-width: 39.9rem;
   height: 36.4rem;
-  border: 0.1rem dashed var(--grey300);
+  border: 0.1rem solid var(--grey300);
   border-radius: var(--borderRadius16);
   -webkit-border-radius: var(--borderRadius16);
   -moz-border-radius: var(--borderRadius16);

@@ -211,7 +211,7 @@ function updateResult() {
         </svg>
         <p>Заповніть форму для підбіру теплового насоса</p>
       </div>`
-    resultWrapper.style.border = '0.1rem dashed var(--grey300)'
+    resultWrapper.style.border = '0.1rem solid var(--grey300)'
     return
   }
 
