@@ -223,7 +223,7 @@ button:hover {
 }
 
 .navigation-item {
-  font-size: var(--fs-14);
+  font-size: var(--fs-15);
   font-weight: var(--fw-600);
 }
 
@@ -307,6 +307,7 @@ button:hover {
 
 .main-img {
   width: 100%;
+  max-width: 137.6rem;
   margin: 6.4rem 0rem 0rem 0rem;
   grid-area: img;
 }
