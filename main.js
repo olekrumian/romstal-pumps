@@ -174,21 +174,25 @@ const romstalPumps = [
     img: './assets/img/pumps.png',
     name: 'romstal ecoheat',
     power: 8,
+    url: 'https://romstal.ua/uk/product/19838-teplovoj-nasos-vozdukh-voda-dlja-otoplenyja-okhlazhdenyja-romstal-ecoheat-8-kw',
   },
   {
     img: './assets/img/pumps.png',
     name: 'romstal ecoheat',
     power: 12,
+    url: 'https://romstal.ua/uk/product/19837-teplovoj-nasos-vozdukh-voda-dlja-otoplenyja-okhlazhdenyja-romstal-ecoheat-12kvt',
   },
   {
     img: './assets/img/pumps.png',
     name: 'romstal ecoheat',
     power: 16,
+    url: 'https://romstal.ua/uk/product/19801-teplovyj-nasos-povitrja-voda-dlja-opalennja-okholodzhennja-romstal-ecoheat-15-5kw',
   },
   {
     img: './assets/img/pumps30.png',
     name: 'romstal ecoheat',
     power: 30,
+    url: 'https://romstal.ua/uk/product/33121-teplovoy-nasos-m-thermal-a-series-monoblok-mhc-v30w-d2rn8-30kvt',
   },
 ]
 
@@ -197,7 +201,6 @@ function updateResult() {
   const squareValue = parseFloat(square.value)
 
   if (isNaN(withoutIsolation) || isNaN(squareValue)) {
-    // Handle the case when either value is not a number
     result.textContent = 0
     resultWrapper.innerHTML = `
       <div class="result-form-info">
@@ -233,6 +236,7 @@ function updateResult() {
       <img src="${selectedPump.img}" alt="${selectedPump.name}">
       <h3>${selectedPump.name}</h3>
       <p>Power: ${selectedPump.power} kW</p>
+      <a class="item-button" href="${selectedPump.url}">Детальніше</a>
     </div>
   `
 }
@@ -241,9 +245,3 @@ isolationSelect.addEventListener('change', updateResult)
 square.addEventListener('input', updateResult)
 
 /* End of Dropdown */
-/* 
-1. Від 0 до 130 м² — 8 кВт
-2. Від 131 до 190 м² — 12 кВт
-3. Від 191 до 270 м² — 16 кВт
-4. Від 271 до 500 м² — 30 кВт
-*/
