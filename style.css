@@ -2463,7 +2463,7 @@ select {
     padding: var(--margin24) var(--margin16);
     border-radius: var(--margin16);
     border: 0.1rem solid var(--thirdly-white);
-    background: var(--primary-white);
+    background: var(--secondary-white);
     -webkit-border-radius: var(--margin16);
     -moz-border-radius: var(--margin16);
     -ms-border-radius: var(--margin16);
