@@ -1782,7 +1782,7 @@ select {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0rem 0rem 0.8rem 1.5rem;
+    padding: 0rem 0rem 0.8rem 1.3rem;
     margin: 0 auto var(--margin24);
     height: var(--headerHeightMobile);
     transform: none;
@@ -1832,6 +1832,7 @@ select {
 
   .logo-title {
     font-size: var(--fs-22);
+    line-height: normal;
   }
 
   .nav-logo {
