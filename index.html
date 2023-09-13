@@ -184,23 +184,17 @@
       <div class="selection-form">
         <form action="" class="form-isolation">
           <label for="isolation">Ізоляція будівлі <span>*</span></label>
-          <input id="isolation" type="text" class="isolation" list="isolation-data" placeholder="Без ізоляції"
-            name="isolation" autocomplete="off">
-
-          <datalist id="isolation-data">
-            <option>Низька (5 см)</option>
-            <option>Середня (10 см)</option>
-            <option>Висока (більше 10 см )</option>
-          </datalist>
+          <select id="isolation" class="isolation">
+            <option value="90">Без ізоляції</option>
+            <option value="80">Низька (5 см)</option>
+            <option value="70">Середня (10 см)</option>
+            <option value="60">Висока (більше 10 см)</option>
+          </select>
           <label for="square">Корисна площа будівлі <span>*</span></label>
           <input id="square" type="number" inputmode="decimal" class=" square" placeholder="м²">
           <div class="selection-result-wrapper">
             <div class="result-item">
-              <p class="selection-item-title">Об’єм будівлі</p>
-              <p class="selection-item-result">0</p>
-            </div>
-            <div class="result-item">
-              <p class="selection-item-title">тепловитрати</p>
+              <p class="selection-item-title">тепловитрати будинку</p>
               <p class="selection-item-result">0</p>
             </div>
           </div>

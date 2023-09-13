@@ -162,3 +162,88 @@ setupSlider('.compact-slider', '.card', '.compact-arrow i')
 setupSlider('.carousel-completed', '.card', '.completed-arrow i')
 setupSlider('.carousel-video', '.card-video', '.video-arrow i')
 /* End of Sliders */
+
+/* Dropdown */
+const isolationSelect = document.getElementById('isolation')
+const square = document.getElementById('square')
+const result = document.querySelector('.selection-item-result')
+const resultWrapper = document.querySelector('.result-form')
+
+const romstalPumps = [
+  {
+    img: './assets/img/pumps.png',
+    name: 'romstal ecoheat',
+    power: 8,
+  },
+  {
+    img: './assets/img/pumps.png',
+    name: 'romstal ecoheat',
+    power: 12,
+  },
+  {
+    img: './assets/img/pumps.png',
+    name: 'romstal ecoheat',
+    power: 16,
+  },
+  {
+    img: './assets/img/pumps30.png',
+    name: 'romstal ecoheat',
+    power: 30,
+  },
+]
+
+function updateResult() {
+  const withoutIsolation = parseFloat(isolationSelect.value)
+  const squareValue = parseFloat(square.value)
+
+  if (isNaN(withoutIsolation) || isNaN(squareValue)) {
+    // Handle the case when either value is not a number
+    result.textContent = 0
+    resultWrapper.innerHTML = `
+      <div class="result-form-info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+          <path
+            d="M12.5 8.71143V12.7114M12.5 16.7114H12.51M12.5 3.71143C19.7 3.71143 21.5 5.51143 21.5 12.7114C21.5 19.9114 19.7 21.7114 12.5 21.7114C5.3 21.7114 3.5 19.9114 3.5 12.7114C3.5 5.51143 5.3 3.71143 12.5 3.71143Z"
+            stroke="#929292" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p>Заповніть форму для підбіру теплового насоса</p>
+      </div>`
+    return
+  }
+
+  const newValue = withoutIsolation * squareValue
+  result.textContent = `${newValue} ВТ`
+
+  let selectedPumpIndex
+
+  if (squareValue <= 130) {
+    selectedPumpIndex = 0
+  } else if (squareValue > 130 && squareValue <= 190) {
+    selectedPumpIndex = 1
+  } else if (squareValue > 190 && squareValue <= 270) {
+    selectedPumpIndex = 2
+  } else if (squareValue > 270 && squareValue <= 500) {
+    selectedPumpIndex = 3
+  }
+
+  const selectedPump = romstalPumps[selectedPumpIndex]
+
+  resultWrapper.innerHTML = `
+    <div class="pump-item">
+      <img src="${selectedPump.img}" alt="${selectedPump.name}">
+      <h3>${selectedPump.name}</h3>
+      <p>Power: ${selectedPump.power} kW</p>
+    </div>
+  `
+}
+
+isolationSelect.addEventListener('change', updateResult)
+square.addEventListener('input', updateResult)
+
+/* End of Dropdown */
+/* 
+1. Від 0 до 130 м² — 8 кВт
+2. Від 131 до 190 м² — 12 кВт
+3. Від 191 до 270 м² — 16 кВт
+4. Від 271 до 500 м² — 30 кВт
+*/

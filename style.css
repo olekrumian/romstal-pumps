@@ -553,7 +553,6 @@ button {
 
 .selection {
   margin: 25.6rem auto 0rem;
-  position: relative;
   text-align: center;
 }
 
@@ -640,7 +639,17 @@ button {
 
 .selection-result-wrapper {
   display: flex;
-  justify-content: flex-start;
+  width: 50%;
+}
+
+select {
+  -webkit-appearance: none;
+  /* Remove the Apple-specific styling */
+  -moz-appearance: none;
+  /* Remove the Firefox-specific styling */
+  appearance: none;
+  /* Remove the standard browser-specific styling */
+  background: transparent;
 }
 
 .result-item {
@@ -2099,10 +2108,6 @@ button {
     color: var(--grey500);
   }
 
-  .selection-result-wrapper {
-    display: flex;
-    justify-content: flex-start;
-  }
 
   .result-item {
     width: 100%;
