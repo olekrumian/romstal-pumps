@@ -1720,6 +1720,7 @@ select {
   font-size: var(--fs-10);
   font-weight: var(--fw-800);
   text-align: left;
+  text-transform: uppercase;
 }
 
 .pump-item-power {
