@@ -211,6 +211,7 @@ function updateResult() {
         </svg>
         <p>Заповніть форму для підбіру теплового насоса</p>
       </div>`
+    resultWrapper.style.border = '0.1rem dashed var(--grey300)'
     return
   }
 
@@ -233,12 +234,18 @@ function updateResult() {
 
   resultWrapper.innerHTML = `
     <div class="pump-item">
-      <img src="${selectedPump.img}" alt="${selectedPump.name}">
-      <h3>${selectedPump.name}</h3>
-      <p>Power: ${selectedPump.power} kW</p>
+      <img class="pump-item-img" src="${selectedPump.img}" alt="${selectedPump.name}">
+      <h3 class="pump-item-title">${selectedPump.name}</h3>
+      <p class="pump-item-power">${selectedPump.power} кВт</p>
       <a class="item-button" href="${selectedPump.url}">Детальніше</a>
+        <div class="item-top-seller">
+            <img src="./assets/icon/alert-square-rounded.svg" alt="">
+            <p>Рекомендуємо</p>
+        </div>
     </div>
   `
+
+  resultWrapper.style.border = 'none'
 }
 
 isolationSelect.addEventListener('change', updateResult)
