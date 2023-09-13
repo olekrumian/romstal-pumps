@@ -2703,6 +2703,7 @@ select {
   }
 
   .application .result-form-info p {
+    font-size: var(--fs-10);
     text-align: center;
   }
 
