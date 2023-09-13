@@ -1743,6 +1743,13 @@ select {
 }
 
 @media only screen and (max-width: 576px) {
+
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+
   .section-header {
     font-size: var(--fs-10);
     font-weight: var(--fw-800);
