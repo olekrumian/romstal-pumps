@@ -90,6 +90,11 @@ ul {
 a {
   text-decoration: none;
   color: var(--primary-black);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 a:hover {
@@ -165,6 +170,11 @@ button {
   font-size: var(--fs-14);
   font-weight: var(--fw-700);
   font-family: var(--ff-primary);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 button:hover {
@@ -250,6 +260,11 @@ button:hover {
   -moz-border-radius: var(--borderRadius8);
   -ms-border-radius: var(--borderRadius8);
   -o-border-radius: var(--borderRadius8);
+}
+
+.navigation-phone:hover {
+  color: var(--primary-white);
+  background-color: var(--primary-color);
 }
 
 .mobile-nav-toggle,
@@ -460,7 +475,16 @@ button:hover {
   -moz-border-radius: var(--borderRadius8);
   -ms-border-radius: var(--borderRadius8);
   -o-border-radius: var(--borderRadius8);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
 
+.item-button:hover {
+  color: var(--primary-white);
+  background-color: var(--primary-color);
 }
 
 .ready-solution-container {

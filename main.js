@@ -244,4 +244,9 @@ function updateResult() {
 isolationSelect.addEventListener('change', updateResult)
 square.addEventListener('input', updateResult)
 
+square.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    e.preventDefault()
+  }
+})
 /* End of Dropdown */
