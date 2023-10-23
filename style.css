@@ -222,6 +222,10 @@ button:hover {
   display: none;
 }
 
+.mobile-btn-phone {
+  display: none;
+}
+
 .navigation-item {
   font-size: var(--fs-15);
   font-weight: var(--fw-600);
@@ -1738,8 +1742,6 @@ select {
 
 @media only screen and (max-width: 600px) {
 
-
-
   .section-header {
     font-size: var(--fs-10);
     font-weight: var(--fw-800);
@@ -1837,6 +1839,27 @@ select {
     position: absolute;
     top: 1.6rem;
     left: 1.5rem;
+  }
+
+  .mobile-btn-phone {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 6.3rem;
+    padding: .8rem 1.2rem;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-700);
+    border-radius: 10rem;
+    background: var(--primary-color);
+    color: var(--primary-white);
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+  }
+
+  .mobile-btn-phone:hover {
+    color: var(--primary-white);
   }
 
   .navigation[data-visible='true'] {
@@ -2015,7 +2038,7 @@ select {
     justify-content: flex-end;
     position: relative;
     width: 100%;
-    height: 46.4rem;
+    height: 47rem;
   }
 
   .slider-arrow-wrapper {
@@ -2090,8 +2113,6 @@ select {
   .ready-solution-item:has(.item-top-seller) .item-suptitle {
     color: var(--grey200);
   }
-
-  .item-top-seller {}
 
   .item-power {
     font-size: var(--fs-26);
