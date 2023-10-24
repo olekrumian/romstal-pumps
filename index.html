@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Heat Pumps</title>
 </head>
@@ -91,27 +92,39 @@
       </div>
       <div class="main-benefits-wrapper">
         <div class="main-benefits-item div1">
-          <img src="./assets/icon/" alt="Заощаджуйте">
+          <div class="benefits-item-img">
+            <img src="./assets/icon/wallet.svg" alt="Заощаджуйте">
+          </div>
           <h4 class="benefits-title">Заощаджуйте до 100%</h4>
         </div>
         <div class="main-benefits-item div3">
-          <img src="./assets/icon/" alt="Температурний режим">
+          <div class="benefits-item-img">
+            <img src="./assets/icon/temperature-celsius.svg" alt="Температурний режим">
+          </div>
           <h4 class="benefits-title">Температурний режим роботи від -25°C до + 46°C</h4>
         </div>
         <div class="main-benefits-item div4">
-          <img src="./assets/icon/" alt="Гучність">
+          <div class="benefits-item-img">
+            <img src="./assets/icon/volume.svg" alt="Гучність">
+          </div>
           <h4 class="benefits-title">Гучність 35DB</h4>
         </div>
         <div class="main-benefits-item div2">
-          <img src="./assets/icon/" alt="Гарантія">
+          <div class="benefits-item-img">
+            <img src="./assets/icon/shield.svg" alt="Гарантія">
+          </div>
           <h4 class="benefits-title">Гарантія 3 роки</h4>
         </div>
         <div class="main-benefits-item div5">
-          <img src="./assets/icon/" alt="Енергоефективність">
+          <div class="benefits-item-img">
+            <img src="./assets/icon/bolt.svg" alt="Енергоефективність">
+          </div>
           <h4 class="benefits-title">Енергоефективність А+++</h4>
         </div>
         <div class="main-benefits-item div6">
-          <img src="./assets/icon/" alt="Теплова та охолоджувальна потужність">
+          <div class="benefits-item-img">
+            <img src="./assets/icon/loader-3.svg" alt="Теплова та охолоджувальна потужність">
+          </div>
           <h4 class="benefits-title">Теплова та охолоджувальна потужність 8 — 3000 кВт</h4>
         </div>
       </div>
@@ -216,13 +229,15 @@
     <!-- End of Selection -->
     <!-- Call Form -->
     <section id="callForm" class="form">
+      <p class="call-form-title">Потрібна допомога?</p>
+      <p class="call-form-subtitle">Залиште ваш номер телефону і ми вам зателефонуємо</p>
       <form action="" class="call-form">
-        <label for="call" class="form-title">Індивідуальний підбір насоса</label>
         <input id="call" class="call-form-input" type="text" inputmode="tel" placeholder="+38" autocomplete="off"
           aria-label="Відправити" title="Відправити" required>
         <div class="call-form-line"></div>
         <button class="form-btn" aria-label="Відправити" title="Відправити"></button>
       </form>
+      <p class="call-form-disclaimer">Відправляючи цю форму ви погоджуєтеся на обробку персональних даних</p>
     </section>
     <!-- End of Call Form -->
     <!-- Solution -->
@@ -232,38 +247,53 @@
         усуває потребу в
         традиційних газових та
         електричних котлах або працюватиме разом з ними</p>
+
+      <div class="solution-scheme-wrapper">
+        <div class="solution-scheme-1">
+          <p>Тепловий насос</p>
+        </div>
+        <div class="solution-scheme-2">
+          <img src="./assets/icon/square-rounded-plus-filled.svg" alt="">
+        </div>
+        <div class="solution-scheme-3">
+          <p>Тепла підлога</p>
+        </div>
+        <div class="solution-scheme-4">
+          <p>Фанкойл</p>
+        </div>
+        <div class="solution-scheme-5">
+          <p>Радіатор</p>
+        </div>
+        <div class="solution-scheme-6">
+          <p>Бойлер</p>
+        </div>
+      </div>
     </section>
-    <div class="solution-scheme-wrapper">
-      <picture class="solution-img">
-        <source media="(max-width: 576px)" srcset="./assets/solution-mobile.png">
-        <img loading="lazy" class="pc-image" src="./assets/solution-desktop.png" alt="Цілорічне рішення">
-      </picture>
-      <!-- <p class="scheme-title">Тепла підлога</p>
-      <p class="scheme-title-left">Фанкойли</p>
-      <p class="scheme-title scheme-title-active">Тепловий насос</p>
-      <p class="scheme-title-right">Бойлер</p>
-      <p class="scheme-title">Радіатори</p> -->
-    </div>
     <div class="solution-item-wrapper">
       <div class="solution-item">
-        <p class="solution-item-num">01</p>
         <p class="solution-item-title">Енергоефективний</p>
-        <p class="solution-item-text">Використовує невелику кількість електроенергії, забезпечує високий коефіцієнт
-          продуктивності, що суттєво знижує рахунки
-          за опалення</p>
+        <img class="solution-item-img" loading="lazy" src=" ./assets/icon/bolt.svg" alt="">
+        <p class="solution-item-text">
+          Споживає невелику кількість електроенергії, забезпечує високий коефіцієнт продуктивності, суттєво знижуючи
+          рахунки за
+          опалення
+        </p>
       </div>
       <div class="solution-item">
-        <p class="solution-item-num">02</p>
         <p class="solution-item-title">Екологічний</p>
-        <p class="solution-item-text">Використовує природні джерела тепла, ґрунт, повітря або воду, що робить його більш
-          екологічно чистими порівняно з
-          системами опалення на газу або нафті</p>
+        <img class="solution-item-img" loading="lazy" src=" ./assets/icon/home-eco.svg" alt="">
+        <p class="solution-item-text">
+          Використовує ґрунт, повітря та воду, що робить його більш екологічно чистими порівняно з системами опалення на
+          газу або
+          нафті
+        </p>
       </div>
       <div class="solution-item">
-        <p class="solution-item-num">03</p>
         <p class="solution-item-title">Універсальний</p>
-        <p class="solution-item-text">Нагріває або охолоджує приміщення, поєднується з системами підігріву води або
-          підлоги</p>
+        <img class="solution-item-img" loading="lazy" src=" ./assets/icon/loader-3.svg" alt="">
+        <p class="solution-item-text">
+          Нагріває або охолоджує приміщення, поєднується з системами підігріву води або підлоги
+        </p>
       </div>
     </div>
     <!-- End of Solution -->
@@ -557,14 +587,12 @@
             </div>
           </li>
           <li class="card-video">
-            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></div>
-          </li>
-          <li class="card-video">
-            <div class="img"> <iframe width="" height="" src="https://www.youtube.com/embed/PsYw0j5Sxx4" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></div>
+            <div class="img">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/nNTEFJ5VOyE?si=S8A9Ox7Q18Z26Zq2"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
           </li>
         </ul>
         <div class="slider-arrow-wrapper video-arrow">
@@ -576,13 +604,15 @@
     <!-- End of Completed -->
     <!-- Second Call Form -->
     <section id="callForm" class="form">
+      <p class="call-form-title">Потрібна допомога?</p>
+      <p class="call-form-subtitle">Залиште ваш номер телефону і ми вам зателефонуємо</p>
       <form action="" class="call-form">
-        <label for="call" class="form-title">Індивідуальний підбір насоса</label>
         <input id="call" class="call-form-input" type="text" inputmode="tel" placeholder="+38" autocomplete="off"
           aria-label="Відправити" title="Відправити" required>
         <div class="call-form-line"></div>
         <button class="form-btn" aria-label="Відправити" title="Відправити"></button>
       </form>
+      <p class="call-form-disclaimer">Відправляючи цю форму ви погоджуєтеся на обробку персональних даних</p>
     </section>
     <!-- End of Second Call Form -->
     <!-- Footer -->
