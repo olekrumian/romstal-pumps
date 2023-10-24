@@ -316,6 +316,11 @@ button:hover {
   max-width: 137.6rem;
   margin: 6.4rem 0rem 0rem 0rem;
   grid-area: img;
+  border-radius: var(--borderRadius16);
+  -webkit-border-radius: var(--borderRadius16);
+  -moz-border-radius: var(--borderRadius16);
+  -ms-border-radius: var(--borderRadius16);
+  -o-border-radius: var(--borderRadius16);
 }
 
 .main-benefits-wrapper {
