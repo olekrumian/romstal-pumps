@@ -878,7 +878,7 @@ select {
 }
 
 .solution-title {
-  margin: 0rem auto var(--margin24);
+  margin: 0rem auto var(--margin16);
 }
 
 .solution-suptitle {
@@ -910,7 +910,7 @@ select {
   background: var(--primary-black);
   box-shadow: 0rem .5rem 2.5rem 0rem rgba(0, 0, 0, 0.04);
   color: var(--primary-white);
-  padding: 1.2rem 2.4rem;
+  padding: 1.6rem 2.4rem;
 }
 
 .solution-scheme-2 {
@@ -944,7 +944,7 @@ select {
 .solution-scheme-wrapper .solution-scheme-6 {
   width: 100%;
   text-wrap: nowrap;
-  padding: 1.2rem 2.4rem;
+  padding: 1.6rem 2.4rem;
   border-radius: 10rem;
   border: .1rem solid var(--thirdly-white);
   background: var(--primary-white);
@@ -970,11 +970,11 @@ select {
   height: 37rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 5.6rem;
   align-items: flex-start;
   border-radius: 1.6rem;
   border: .1rem solid var(--thirdly-white);
-  background: var(--primary-white);
+  background: var(--secondary-white);
 }
 
 .solution-item-title {
@@ -1011,7 +1011,7 @@ select {
 }
 
 .energyefficient-title {
-  margin: 0rem 0rem 8rem 0rem;
+  margin: 0rem 0rem 5.6rem 0rem;
 }
 
 .energyefficient-wrapper {
@@ -1113,7 +1113,7 @@ select {
 }
 
 .environment-item-img {
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   width: 5.6rem;
   height: 5.6rem;
 }
@@ -1433,7 +1433,7 @@ select {
   flex-direction: column;
 }
 
-.calculation-item:last-child {
+.calculation-item:first-child {
   background: var(--secondary-white);
 }
 
@@ -1736,7 +1736,7 @@ select {
 
 .item-button:hover {
   color: var(--secondary-white);
-  background-color: var(--hover-link-color);
+  background-color: var(--primary-color);
 }
 
 @media only screen and (max-width: 600px) {
@@ -1787,7 +1787,7 @@ select {
     width: 100%;
     max-width: 100vw;
     background-color: var(--primary-white);
-    z-index: 2;
+    z-index: 9;
     -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
@@ -1992,6 +1992,18 @@ select {
     width: 6.4rem;
     height: 6.4rem;
     margin: 0rem calc(var(--margin08)*3) 0rem 0rem;
+    border-radius: 10rem;
+    border: .1rem solid #F4F4F5;
+    background: #FFF;
+    box-shadow: 0rem .5rem 2.5rem 0rem rgba(0, 0, 0, 0.04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .benefits-item-img img {
+    width: 3.2rem;
+    height: 3.2rem;
   }
 
   .div1 {
@@ -2410,11 +2422,11 @@ select {
   .form-btn {
     position: absolute;
     background: url('./assets/icon/sendArrow.svg') no-repeat center;
-    bottom: 0.8rem;
+    bottom: 0.2rem;
     right: 0;
     transform: translateY(-50%);
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 4rem;
+    height: 4rem;
     background-size: contain;
   }
 
@@ -2546,7 +2558,6 @@ select {
   }
 
   .solution-item-title {
-    margin: 0rem 0rem 1.2rem 0rem;
     font-size: var(--fs-10);
     font-weight: var(--fw-800);
   }
