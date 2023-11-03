@@ -202,7 +202,7 @@ button:hover {
   width: 100%;
   height: var(--headerHeight);
   background-color: var(--primary-white);
-  z-index: 2;
+  z-index: 9;
   box-shadow: 0rem .5rem .8rem 0rem rgba(0, 0, 0, 0.04);
 }
 
