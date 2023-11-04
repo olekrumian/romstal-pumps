@@ -164,7 +164,7 @@ setupSlider('.carousel-completed', '.card', '.completed-arrow i')
 setupSlider('.carousel-video', '.card-video', '.video-arrow i')
 /* End of Sliders */
 
-/* Dropdown */
+/* Solution */
 const isolationSelect = document.getElementById('isolation')
 const square = document.getElementById('square')
 const result = document.querySelector('.selection-item-result')
@@ -229,6 +229,8 @@ function updateResult() {
     selectedPumpIndex = 2
   } else if (squareValue > 270 && squareValue <= 500) {
     selectedPumpIndex = 3
+  } else {
+    selectedPumpIndex = 3
   }
 
   const selectedPump = romstalPumps[selectedPumpIndex]
@@ -257,4 +259,4 @@ square.addEventListener('keydown', function (e) {
     e.preventDefault()
   }
 })
-/* End of Dropdown */
+/* End of Solution */
