@@ -1781,7 +1781,7 @@ select {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0rem 0rem 0.8rem 1.3rem;
+    padding: 0rem 0rem 1.2rem 3%;
     margin: 0 auto var(--margin24);
     height: var(--headerHeightMobile);
     transform: none;
@@ -1837,7 +1837,7 @@ select {
   .nav-logo {
     display: block;
     position: absolute;
-    top: 1.6rem;
+    top: 1.1rem;
     left: 1.5rem;
   }
 
