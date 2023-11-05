@@ -858,8 +858,6 @@ select {
 
 .form-btn {
   position: absolute;
-  background: url('./assets/icon/sendArrow.svg') no-repeat center;
-  bottom: 2rem;
   right: 0;
   transform: translateY(-50%);
   width: 4.4rem;
@@ -2096,8 +2094,8 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 4rem;
-    height: 4rem;
+    width: 3.4rem;
+    height: 3.4rem;
     border-radius: 10rem;
     background: var(--primary-black);
     cursor: pointer;
@@ -2424,12 +2422,11 @@ select {
 
   .form-btn {
     position: absolute;
-    background: url('./assets/icon/sendArrow.svg') no-repeat center;
-    bottom: 0.2rem;
+    bottom: 0.8rem;
     right: 0;
     transform: translateY(-50%);
-    width: 4rem;
-    height: 4rem;
+    width: 3.4rem;
+    height: 3.4rem;
     background-size: contain;
   }
 
@@ -2537,6 +2534,7 @@ select {
   .solution-item {
     flex-basis: 100%;
     padding: calc(var(--margin16) * 2);
+    gap: 0;
     border-radius: var(--margin16);
     border: 0.1rem solid var(--thirdly-white);
     background: var(--secondary-white);
@@ -2909,10 +2907,6 @@ select {
     gap: 3.2rem;
     border-radius: 1.6rem;
     border: 0.1rem solid var(--thirdly-white);
-  }
-
-  .calculation-item:last-child {
-    background: var(--secondary-white);
   }
 
   .calculation-item-header {
