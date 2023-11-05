@@ -1838,7 +1838,7 @@ select {
     display: block;
     position: absolute;
     top: 1.1rem;
-    left: 1.5rem;
+    left: 3%;
   }
 
   .mobile-btn-phone {
