@@ -93,6 +93,10 @@ function setupSlider(carouselSelector, cardSelector, arrowSelectors) {
   const arrowBtns = document.querySelectorAll(arrowSelectors)
   const carouselChildren = [...carousel.children]
 
+  carouselChildren.forEach((card) => {
+    card.addEventListener('click', openFullScreen)
+  })
+
   let isDragging = false
   let startX, startScrollLeft
 
@@ -260,3 +264,45 @@ square.addEventListener('keydown', function (e) {
   }
 })
 /* End of Solution */
+
+/* fullScreen slider */
+
+function openFullScreen() {
+  if (window.matchMedia('(max-width: 577px)').matches) {
+    carouselChildren.forEach((card) => {
+      card.addEventListener('click', openFullScreen)
+    })
+  }
+  const clickedCard = this
+  document.body.style.overflow = 'hidden'
+  const fullScreenCard = clickedCard.cloneNode(true)
+  fullScreenCard.classList.add('full-screen-card')
+
+  const closeButton = document.createElement('button')
+  closeButton.classList.add('close-gallery-button')
+  closeButton.addEventListener('click', closeFullScreen)
+
+  const fullScreenContainer = document.createElement('div')
+  fullScreenContainer.classList.add('full-screen-container')
+  fullScreenContainer.appendChild(fullScreenCard)
+  fullScreenCard.appendChild(closeButton)
+
+  document.body.appendChild(fullScreenContainer)
+  document.addEventListener('keydown', handleKeyDown)
+}
+
+function closeFullScreen() {
+  const fullScreenContainer = document.querySelector('.full-screen-container')
+
+  document.body.removeChild(fullScreenContainer)
+  document.body.style.overflow = ''
+
+  document.removeEventListener('keydown', handleKeyDown)
+}
+
+function handleKeyDown(event) {
+  if (event.key === 'Escape') {
+    closeFullScreen()
+  }
+}
+/* End of fullScreen slider */

@@ -601,8 +601,8 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3.4rem;
+  height: 3.4rem;
   border-radius: 10rem;
   background: var(--primary-black);
   cursor: pointer;
@@ -865,6 +865,11 @@ select {
   height: 4.4rem;
   background-size: contain;
   cursor: pointer;
+}
+
+.form-btn img {
+  width: 4.4rem;
+  height: 4.4rem;
 }
 
 .form-btn:hover {
@@ -1438,6 +1443,11 @@ select {
 
 .calculation-item:first-child {
   background: var(--secondary-white);
+  border-radius: var(--borderRadius16);
+  -webkit-border-radius: var(--borderRadius16);
+  -moz-border-radius: var(--borderRadius16);
+  -ms-border-radius: var(--borderRadius16);
+  -o-border-radius: var(--borderRadius16);
 }
 
 .calculation-item-header-title {
@@ -1740,6 +1750,45 @@ select {
 .item-button:hover {
   color: var(--secondary-white);
   background-color: var(--primary-color);
+}
+
+.full-screen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.full-screen-card {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.full-screen-card .img img {
+  width: 100%;
+  height: 96rem;
+}
+
+.close-gallery-button {
+  position: absolute;
+  top: 1.6rem;
+  right: -7.4rem;
+  padding: 0rem 0rem 0rem 0rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background: url('./assets/icon/closeGalerry.svg') center no-repeat;
+  background-color: var(--secondary-white);
+  border: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -2430,6 +2479,11 @@ select {
     width: 3.4rem;
     height: 3.4rem;
     background-size: contain;
+  }
+
+  .form-btn img {
+    width: 3.4rem;
+    height: 3.4rem;
   }
 
   .form-btn:hover {
