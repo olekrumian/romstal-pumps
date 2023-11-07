@@ -858,6 +858,7 @@ select {
 
 .form-btn {
   position: absolute;
+  bottom: 1.8rem;
   right: 0;
   transform: translateY(-50%);
   width: 4.4rem;
