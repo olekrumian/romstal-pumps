@@ -864,6 +864,7 @@ select {
   width: 4.4rem;
   height: 4.4rem;
   background-size: contain;
+  cursor: pointer;
 }
 
 .form-btn:hover {
