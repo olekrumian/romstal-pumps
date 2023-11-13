@@ -186,7 +186,7 @@ button:hover {
 
 .container {
   width: 100%;
-  max-width: 142rem;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -207,7 +207,7 @@ button:hover {
 }
 
 .header-wrapper {
-  max-width: 137.6rem;
+  max-width: 120rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -240,7 +240,7 @@ button:hover {
 }
 
 .navigation-list {
-  margin: 0rem 3.2rem 0rem 0rem;
+  margin: 0rem 2.4rem 0rem 0rem;
   display: flex;
   gap: var(--margin16);
 }
@@ -251,12 +251,18 @@ button:hover {
   gap: var(--margin08);
 }
 
+.leaveRequest {
+  padding: var(--margin16);
+  cursor: pointer;
+}
+
 .navigation-phone {
-  width: 100%;
-  min-width: 16.6rem;
-  padding: var(--margin16) var(--margin24);
+  text-wrap: nowrap;
+  max-width: 15rem;
+  padding: var(--margin16);
   font-size: var(--fs-14);
   font-weight: var(--fw-700);
+  line-height: normal;
   letter-spacing: var(--spacing-02);
   color: var(--primary-color);
   background-color: var(--primary-white);
@@ -601,13 +607,17 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 10rem;
   background: var(--primary-black);
   cursor: pointer;
 }
 
+.slider-arrow-wrapper i img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
 
 .selection {
   margin: 17.6rem auto 0rem;
@@ -775,6 +785,8 @@ select {
 }
 
 .result-form-info p {
+  width: 100%;
+  max-width: 21rem;
   font-size: var(--fs-12);
   font-weight: var(--fw-800);
   text-transform: uppercase;
@@ -789,7 +801,7 @@ select {
   margin: 17.6rem auto 0rem;
   padding: 12.8rem 22.9rem;
   width: 100%;
-  max-width: 142rem;
+  max-width: 120rem;
   height: 62.9rem;
   background: var(--primary-color);
   border-radius: var(--borderRadius16);
@@ -857,6 +869,7 @@ select {
 }
 
 .form-btn {
+  padding: 0;
   position: absolute;
   bottom: 1.8rem;
   right: 0;
@@ -865,15 +878,13 @@ select {
   height: 4.4rem;
   background-size: contain;
   cursor: pointer;
+  background: var(--primary-black);
+  border-radius: 10rem;
 }
 
 .form-btn img {
-  width: 4.4rem;
-  height: 4.4rem;
-}
-
-.form-btn:hover {
-  background-color: transparent;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .solution {
@@ -978,7 +989,7 @@ select {
   height: 37rem;
   display: flex;
   flex-direction: column;
-  gap: 5.6rem;
+  gap: 4rem;
   align-items: flex-start;
   border-radius: 1.6rem;
   border: .1rem solid var(--thirdly-white);
@@ -997,8 +1008,8 @@ select {
 
 .solution-item-img {
   margin: 0 auto;
-  width: 5.6rem;
-  height: 5.6rem;
+  width: 8.8rem;
+  height: 8.8rem;
 }
 
 .solution-item-text {
@@ -1121,9 +1132,9 @@ select {
 }
 
 .environment-item-img {
-  margin: 0 auto 3rem;
-  width: 5.6rem;
-  height: 5.6rem;
+  margin: 0 auto 4rem;
+  width: 8.8rem;
+  height: 8.8rem;
 }
 
 .environment-item-graph {
@@ -1139,6 +1150,7 @@ select {
   -moz-border-radius: 6rem;
   -ms-border-radius: 6rem;
   -o-border-radius: 6rem;
+  background: linear-gradient(90deg, #00B1FF 0%, #ABE7FF 12.55%, #DCF2FD 24.99%, #E3F6FD 37.43%, #FFFFB7 49.9%, #FCD972 62.72%, #FFCE56 75.11%, #FFA800 87.59%, #F61F1F 100%);
 }
 
 .environment-item-graph-left,
@@ -1146,7 +1158,7 @@ select {
   position: relative;
   width: 2.6rem;
   height: 2.6rem;
-  background: var(--primary-black);
+  background: var(--secondary-white);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1487,7 +1499,7 @@ select {
   font-size: var(--fs-13);
   font-weight: var(--fw-800);
   text-transform: uppercase;
-  max-width: 35rem;
+  max-width: 40rem;
   text-align: left;
 }
 
@@ -1956,6 +1968,7 @@ select {
   }
 
   .navigation-btn-wrapper .leaveRequest {
+    padding: var(--margin16) var(--margin24);
     max-width: 50%;
     font-size: var(--fs-14);
     font-weight: var(--fw-700);
@@ -2150,6 +2163,11 @@ select {
     border-radius: 10rem;
     background: var(--primary-black);
     cursor: pointer;
+  }
+
+  .slider-arrow-wrapper i img {
+    width: 1.8rem;
+    height: 1.8rem;
   }
 
   .ready-solution .solution-arrow {
@@ -2482,12 +2500,8 @@ select {
   }
 
   .form-btn img {
-    width: 3.4rem;
-    height: 3.4rem;
-  }
-
-  .form-btn:hover {
-    background-color: transparent;
+    width: 1.8rem;
+    height: 1.8rem;
   }
 
   /* End of Call Form */
@@ -2528,7 +2542,7 @@ select {
 
   .solution-scheme-wrapper div>p {
     text-transform: uppercase;
-    font-size: var(--fs-10);
+    font-size: var(--fs-12);
     font-weight: var(--fw-800);
   }
 
@@ -2608,9 +2622,9 @@ select {
   }
 
   .solution-item-img {
-    margin: 4rem auto;
-    width: 4.8rem;
-    height: 4.8rem;
+    margin: 3.2rem auto;
+    width: 7.2rem;
+    height: 7.2rem;
   }
 
   .solution-item-title {
@@ -2698,7 +2712,7 @@ select {
   }
 
   .environment-item {
-    height: 32rem;
+    height: 30rem;
     width: 100%;
   }
 
@@ -2709,15 +2723,15 @@ select {
 
   .environment-item-img {
     margin: 0 auto;
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 6.4rem;
+    height: 6.4rem;
   }
 
   .environment-item-graph-left {
     position: relative;
     width: 2.6rem;
     height: 2.6rem;
-    background: var(--primary-black);
+    background: var(--secondary-white);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -2740,7 +2754,7 @@ select {
     position: relative;
     width: 2.6rem;
     height: 2.6rem;
-    background: var(--primary-black);
+    background: var(--secondary-white);
     border-radius: 50%;
   }
 
