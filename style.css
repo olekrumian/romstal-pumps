@@ -2163,16 +2163,20 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 10rem;
     background: var(--primary-black);
     cursor: pointer;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
   }
 
   .slider-arrow-wrapper i img {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   .ready-solution .solution-arrow {
@@ -2496,11 +2500,11 @@ select {
 
   .form-btn {
     position: absolute;
-    bottom: 0.8rem;
+    bottom: 0.2rem;
     right: 0;
     transform: translateY(-50%);
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 4rem;
+    height: 4rem;
     background-size: contain;
   }
 
