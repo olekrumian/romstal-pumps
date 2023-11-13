@@ -229,7 +229,7 @@ button:hover {
 }
 
 .navigation-item {
-  font-size: var(--fs-15);
+  font-size: var(--fs-14);
   font-weight: var(--fw-600);
 }
 
@@ -399,7 +399,7 @@ button:hover {
 }
 
 .ready-solution {
-  margin: 17.6rem auto 0rem;
+  margin: 12.8rem auto 0rem;
   position: relative;
   text-align: center;
 }
@@ -620,7 +620,7 @@ button:hover {
 }
 
 .selection {
-  margin: 17.6rem auto 0rem;
+  margin: 12.8rem auto 0rem;
   text-align: center;
 }
 
@@ -798,7 +798,7 @@ select {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 17.6rem auto 0rem;
+  margin: 12.8rem auto 0rem;
   padding: 12.8rem 22.9rem;
   width: 100%;
   max-width: 120rem;
@@ -892,7 +892,7 @@ select {
 }
 
 .solution {
-  margin: 17.6rem auto 0rem;
+  margin: 12.8rem auto 0rem;
   text-align: center;
   max-width: 68rem;
 }
@@ -1023,7 +1023,7 @@ select {
 }
 
 .energyefficient {
-  margin: 17.6rem 0rem 0rem 0rem;
+  margin: 12.8rem 0rem 0rem 0rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1086,7 +1086,7 @@ select {
 }
 
 .environment {
-  margin: 17.6rem 0rem 0rem 0rem;
+  margin: 12.8rem 0rem 0rem 0rem;
   text-align: center;
 }
 
@@ -1183,7 +1183,7 @@ select {
 }
 
 .quiet {
-  margin: 17.6rem 0rem 0rem 0rem;
+  margin: 12.8rem 0rem 0rem 0rem;
   text-align: center;
 }
 
@@ -1256,7 +1256,7 @@ select {
 }
 
 .application {
-  margin: 17.6rem 0rem 0rem 0rem;
+  margin: 12.8rem 0rem 0rem 0rem;
   text-align: center;
 }
 
@@ -1310,7 +1310,7 @@ select {
 }
 
 .compact {
-  margin: 17.6rem auto 0rem;
+  margin: 12.8rem auto 0rem;
   width: 100%;
   max-width: 120rem;
   text-align: center;
@@ -1412,7 +1412,7 @@ select {
 }
 
 .universality {
-  margin: 17.6rem auto 0rem;
+  margin: 12.8rem auto 0rem;
   text-align: center;
 }
 
@@ -1431,7 +1431,7 @@ select {
 }
 
 .calculation {
-  margin: 17.6rem 0rem 0rem 0rem;
+  margin: 12.8rem 0rem 0rem 0rem;
   text-align: center;
 }
 
@@ -1482,6 +1482,7 @@ select {
   border-bottom: 0.1rem solid #e9e8e7;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 0rem 0rem var(--margin16) 0rem;
 }
 
@@ -1520,7 +1521,7 @@ select {
   align-items: center;
   align-self: center;
   gap: 1rem;
-  margin: var(--margin24) 0rem 0rem 0rem;
+  margin: var(--margin16) 0rem 0rem 0rem;
   padding: 1.6rem 1.2rem;
   border-radius: 10rem;
   border: 0.1rem solid #63ae48;
@@ -1549,7 +1550,7 @@ select {
 }
 
 .completed {
-  margin: 17.6rem 0rem 0rem 0rem;
+  margin: 12.8rem 0rem 0rem 0rem;
 }
 
 .completed-title {
@@ -1657,7 +1658,7 @@ select {
 }
 
 .footer {
-  margin: 17.6rem auto 3.2rem;
+  margin: 12.8rem auto 3.2rem;
   width: 100%;
   max-width: 120rem;
   gap: var(--margin16);
@@ -2727,8 +2728,8 @@ select {
 
   .environment-item-img {
     margin: 0 auto;
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 7.2rem;
+    height: 7.2rem;
   }
 
   .environment-item-graph-left {
