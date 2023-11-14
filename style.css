@@ -257,7 +257,7 @@ button:hover {
 }
 
 .navigation-phone {
-  text-wrap: nowrap;
+  white-space: nowrap;
   max-width: 15rem;
   padding: var(--margin16);
   font-size: var(--fs-14);
