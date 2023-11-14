@@ -470,20 +470,20 @@ button:hover {
   font-family: var(--ff-primary);
   border-radius: 0.8rem;
   border: .1rem solid var(--primary-color);
-  background: var(--primary-white);
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--primary-white);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border-radius: 0.8rem;
   border: .1rem solid var(--primary-color);
+  border-radius: 0.8rem;
   border-radius: var(--borderRadius8);
-  -webkit-border-radius: var(--borderRadius8);
-  -moz-border-radius: var(--borderRadius8);
-  -ms-border-radius: var(--borderRadius8);
-  -o-border-radius: var(--borderRadius8);
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
@@ -492,8 +492,8 @@ button:hover {
 }
 
 .item-button:hover {
-  color: var(--primary-white);
-  background-color: var(--primary-color);
+  color: var(--secondary-white);
+  background: var(--hover-link-color);
 }
 
 .ready-solution-container {
@@ -512,34 +512,6 @@ button:hover {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
-}
-
-.ready-solution-item:has(.item-top-seller) {
-  border-radius: 1.6rem;
-  border: .3rem solid var(--primary-color);
-  background: var(--primary-white);
-  box-shadow: 0rem .5rem 2.5rem 0rem rgba(0, 0, 0, 0.04);
-  color: var(--primary-color);
-  -webkit-border-radius: 1.6rem;
-  -moz-border-radius: 1.6rem;
-  -ms-border-radius: 1.6rem;
-  -o-border-radius: 1.6rem;
-  z-index: 1;
-}
-
-.ready-solution-item:has(.item-top-seller) .item-suptitle {
-  color: var(--primary-color);
-}
-
-.ready-solution-item:has(.item-top-seller) .item-button {
-  color: var(--primary-white);
-  background-color: var(--primary-color);
-  border: none;
-}
-
-.ready-solution-item:has(.item-top-seller) .item-button:hover {
-  color: var(--secondary-white);
-  background-color: var(--hover-link-color);
 }
 
 .item-top-seller {
@@ -1765,11 +1737,6 @@ select {
   text-align: left;
 }
 
-.item-button:hover {
-  color: var(--secondary-white);
-  background-color: var(--primary-color);
-}
-
 .full-screen-container {
   position: fixed;
   top: 0;
@@ -1788,6 +1755,9 @@ select {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .full-screen-card .img img {
@@ -1797,7 +1767,7 @@ select {
 
 .close-gallery-button {
   position: absolute;
-  top: 1.6rem;
+  top: 0;
   right: -7.4rem;
   padding: 0rem 0rem 0rem 0rem;
   width: 4rem;
