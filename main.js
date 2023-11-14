@@ -274,6 +274,11 @@ function openFullScreen() {
     })
   }
   const clickedCard = this
+
+  const parentCarousel = clickedCard.closest('.carousel-completed')
+  if (!parentCarousel) {
+    return
+  }
   document.body.style.overflow = 'hidden'
   const fullScreenCard = clickedCard.cloneNode(true)
   fullScreenCard.classList.add('full-screen-card')
