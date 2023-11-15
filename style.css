@@ -554,6 +554,45 @@ button:hover {
   display: none;
 }
 
+.ready-solution-item:has(.item-top-seller) {
+  border-radius: 1.6rem;
+  border: .3rem solid var(--primary-color);
+  background: var(--primary-white);
+  box-shadow: 0rem .5rem 2.5rem 0rem rgba(0, 0, 0, 0.04);
+  color: var(--primary-color);
+  -webkit-border-radius: 1.6rem;
+  -moz-border-radius: 1.6rem;
+  -ms-border-radius: 1.6rem;
+  -o-border-radius: 1.6rem;
+  z-index: 1;
+}
+
+.ready-solution-item:has(.item-top-seller) .item-suptitle {
+  color: var(--primary-color);
+}
+
+.ready-solution-item:has(.item-top-seller) .item-button {
+  color: var(--primary-white);
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.ready-solution-item>.item-button {
+  color: var(--primary-color);
+  background-color: var(--primary-white);
+  border: .1rem solid var(--primary-color);
+}
+
+.ready-solution-item>.item-button:hover {
+  color: var(--primary-white);
+  background-color: var(--hover-link-color);
+
+}
+
+.ready-solution-item:has(.item-top-seller)>.item-button:hover {
+  border: none;
+}
+
 .slider-solution.no-transition {
   scroll-behavior: auto;
 }
@@ -1348,6 +1387,7 @@ select {
   display: flex;
   align-items: center;
   width: 100%;
+  cursor: auto;
 }
 
 .compact-slider::-webkit-scrollbar {
