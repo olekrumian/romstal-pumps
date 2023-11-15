@@ -597,11 +597,11 @@ button:hover {
 .ready-solution-item>.item-button:hover {
   color: var(--primary-white);
   background-color: var(--primary-color);
-
 }
 
 .ready-solution-item:has(.item-top-seller)>.item-button:hover {
   border: none;
+  background-color: var(--hover-link-color);
 }
 
 .slider-solution.no-transition {
