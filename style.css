@@ -2263,6 +2263,12 @@ select {
     color: var(--grey200);
   }
 
+  .ready-solution-item>.item-button {
+    color: var(--primary-white);
+    background-color: var(--primary-color);
+    border: .1rem solid var(--primary-color);
+  }
+
   .item-power {
     font-size: var(--fs-26);
     font-weight: var(--fw-600);
