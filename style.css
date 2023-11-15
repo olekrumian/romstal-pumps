@@ -596,7 +596,7 @@ button:hover {
 
 .ready-solution-item>.item-button:hover {
   color: var(--primary-white);
-  background-color: var(--hover-link-color);
+  background-color: var(--primary-color);
 
 }
 
