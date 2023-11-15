@@ -285,11 +285,22 @@ button:hover {
 }
 
 .main-wrapper {
+  position: relative;
   margin: calc(6.4rem + (var(--headerHeight))) 0rem 6.4rem 0rem;
   display: grid;
   grid:
     "header header" auto "img img" auto / auto auto;
   place-items: center;
+}
+
+.main-wrapper-btn {
+  padding: var(--margin16);
+  white-space: nowrap;
+  position: absolute;
+  bottom: 3.2rem;
+  right: 3.2rem;
+  width: 100%;
+  max-width: 18.1rem;
 }
 
 .main-text-wrapper {
@@ -777,7 +788,7 @@ select {
   width: 100%;
   max-width: 39.9rem;
   height: 36.4rem;
-  border: 0.1rem solid var(--grey300);
+  border: 0.2rem solid var(--grey300);
   border-radius: var(--borderRadius16);
   -webkit-border-radius: var(--borderRadius16);
   -moz-border-radius: var(--borderRadius16);
@@ -1923,7 +1934,7 @@ select {
   .mobile-btn-phone {
     display: block;
     position: absolute;
-    top: 1.2rem;
+    top: .95rem;
     right: 6.3rem;
     padding: .8rem 1.2rem;
     font-size: var(--fs-12);
@@ -2020,6 +2031,14 @@ select {
       "img" auto "header" auto
   }
 
+  .main-wrapper-btn {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .main-text-wrapper {
     grid-area: header;
     display: grid;
@@ -2046,7 +2065,7 @@ select {
 
   .main-description {
     grid-area: text;
-    margin: var(--margin08) 0rem 0rem 0rem;
+    margin: var(--margin08) 0rem var(--margin16) 0rem;
     font-size: var(--fs-16);
     font-weight: var(--fw-500);
   }
@@ -2411,13 +2430,17 @@ select {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 35.5rem;
-    border: 0.1rem solid var(--grey300);
+    height: 12.4rem;
+    border: 0.2rem solid var(--grey300);
     border-radius: var(--borderRadius16);
     -webkit-border-radius: var(--borderRadius16);
     -moz-border-radius: var(--borderRadius16);
     -ms-border-radius: var(--borderRadius16);
     -o-border-radius: var(--borderRadius16);
+  }
+
+  .result-form:has(.pump-item) {
+    height: 35.5rem;
   }
 
   .result-form-info {
@@ -2732,7 +2755,7 @@ select {
   }
 
   .environment-item {
-    height: 30rem;
+    height: 29.5rem;
     width: 100%;
   }
 
