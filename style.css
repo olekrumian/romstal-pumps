@@ -1134,10 +1134,9 @@ select {
 .environment-item {
   padding: 3.2rem;
   width: 39.2rem;
-  height: 35rem;
+  height: 34.7rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   border-radius: var(--borderRadius16);
   border: 0.1rem solid var(--thirdly-white);
@@ -1159,7 +1158,7 @@ select {
 }
 
 .environment-item-img {
-  margin: 0 auto 4rem;
+  margin: 4rem auto 8.1rem auto;
   width: 8.8rem;
   height: 8.8rem;
 }
@@ -2765,7 +2764,7 @@ select {
   }
 
   .environment-item-img {
-    margin: 0 auto;
+    margin: 3.2rem auto 5.6rem auto;
     width: 7.2rem;
     height: 7.2rem;
   }
